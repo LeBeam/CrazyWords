@@ -12,7 +12,7 @@
 - - -
 - **Ilustración:**
 
-![](http://www.subeimagenes.com/thumb/everybody2-885068.jpg)
+![](http://www.subeimagenes.com/img/everybody2-885068.jpg)
 
 - - -
 
