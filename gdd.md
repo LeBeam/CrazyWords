@@ -36,6 +36,6 @@
 
 - **Controles:** El juego será controlado por el usuario que esté utilizando la herramienta. Él será el encargado de seleccionar el idioma que desea, la categoría de vocabulario que desea y también realizar las acciones que se le indiquen. Todo esto lo hará con el mouse/touchpad de la PC. La forma de interactuar con las cosas de la animación es mediante el método de pick and drop.
 ![](http://www.digitaltrends.com/wp-content/uploads/2012/05/alienware-m14x-review-laptop-touchpad.jpg)
-Touchpad de la laptop
+Touchpad de la laptop:
 ![](http://www.datocurioso.net/wp-content/uploads/2011/11/811computer_mouse.jpg)
 Mouse de la PC
