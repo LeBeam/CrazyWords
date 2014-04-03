@@ -1,6 +1,6 @@
 # CrazyWords
 
-![](http://www.subeimagenes.com/img/everybody2-885068.jpg)
+![Ide del Juego]](Recursos/imágenes/Idea Juego.jpg)
 
 
 
@@ -15,11 +15,11 @@
 **Menú tentativo del juego 1:**
 <span style="background:yellow">[No es necesario utilizar un servidor de imágenes (subeimagenes). Basta con poner la imagen en la misma o una subcarpeta y referenciarla desde el archivo .md. Yo lo hice con el primer menú del juego (ver código de archivo .md)]</span>
 
-![Menú tentativo 1](Recursos/imágenes/Menú Inicial 2.png)
+![Menú tentativo 1](Recursos/imágenes/Menu Inicial 2.png)
 
 **Menú tentativo del juego 2:**
 
-![](http://www.subeimagenes.com/img/menu4-890713.png)
+![Menú tentativo 2](Recursos/imágenes/Menu Inicial 1.png)
 - - -
 
 
@@ -32,7 +32,7 @@
 
 Productos similares
 
-1 Duolingo: <span style="background:yellow">[Poner enlaces hacia el sitio del videojuego, si tiene]</span> Es un juego tanto para dispositivos móviles como para Web. Consiste en aprender una serie de vocabulario al inicio del juego. Luego se aprenden frases con las palabras estudiadas. Si se desconoce alguna palabra que compone la frase se puede pulsar sobre la palabra y aparecerá su traducción. El avanza con respecto a los puntos que vaya ganando durante el juego, así se pueden ir desbloqueando secciones nuevas.
+1 Duolingo:  Es un juego tanto para dispositivos móviles como para Web. Consiste en aprender una serie de vocabulario al inicio del juego. Luego se aprenden frases con las palabras estudiadas. Si se desconoce alguna palabra que compone la frase se puede pulsar sobre la palabra y aparecerá su traducción. El avanza con respecto a los puntos que vaya ganando durante el juego, así se pueden ir desbloqueando secciones nuevas. Enlace: https://www.duolingo.com
 
 2 Lista de frases: Se trata de una aplicación móvil en la que se pueden aprender frases y vocabulario nuevo. Comprende tanto audio para las pronunciaciones de las palabras, la palabra escrita y su transcripción fonética. Cuenta además con la opción de grabar audio para compararlo con la pronunciación real.
 
@@ -56,7 +56,7 @@ Como a los monos y chimpancés les encantó tanto nuestra aplicación decidimos 
 
 - - -
 
-- **Controles:** El juego será controlado por touchscreen del dispositivo móvil (tablet o smartphone) <span style="background:yellow">[Si permiten una copia correr en PC (lo cual es muy factible), se controlaría por ratón]</span>
+- **Controles:** El juego será controlado por touchscreen del dispositivo móvil (tablet o smartphone), por medio del método de pick and drop en unos casos. Se creará una copia para PC la cual utilizará el ratón como el dedo en una tablet, con el mismo método de pick and drop.
 
 - - -
 - **Integrantes:**
