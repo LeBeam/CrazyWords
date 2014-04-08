@@ -3,25 +3,24 @@
 ![Ide del Juego](Recursos/imágenes/Idea Juego.jpg)
 
 
-¿Sabías que los monos y chimpancés que probaron esta aplicación se divirtieron tanto que no querían devolvernos las tablets? Con **CrazyWords** se divertirán tanto que hasta se olvidarán que están aprendiendo un nuevo idioma.  ¡Así es, van a aprender y jugar como nunca lo habían hecho! <span style="background:yellow">[Esto no es una descripción del juego, es un método comercial para llamar la atención del lector. No sé hasta qué punto sea adecuado. Suena a que es un juego para monos y que existe una implicación natural de lo que les gusta a los monos le gusta a las personas]</span> 
+¿Sabías que los monos y chimpancés que probaron esta aplicación se divirtieron tanto que no querían devolvernos las tablets? Con **CrazyWords** se divertirán tanto que hasta se olvidarán que están aprendiendo un nuevo idioma.  ¡Así es, van a aprender y jugar como nunca lo habían hecho! 
 
-++**Nota:**++ Ya nos gustaría ver que de verdad los monos y chimpancés aprenden idiomas y se divierten tanto como ustedes con esta aplicación. 
+<span style="background:yellow">[Esto no es una descripción del juego, es un método comercial para llamar la atención del lector. No sé hasta qué punto sea adecuado. Suena a que es un juego para monos y que existe una implicación natural de lo que les gusta a los monos le gusta a las personas]</span>
+
+++**Nota:**++ Ya nos gustaría ver que de verdad los monos y chimpancés aprenden idiomas y se divierten tanto como ustedes con esta aplicación.
 
 ---
-___
 
 ## **Menú tentativo del juego 1**
 
 ![Menú tentativo 1](Recursos/imágenes/Menu Inicial 2.png)
 
-___
 
 ## **Menú tentativo del juego 2**
 ![Menú tentativo 2](Recursos/imágenes/Menu Inicial 1.png)
 
 ---
 
-___
 
 ## Ficha técnica
 
@@ -39,44 +38,43 @@ Productos similares
 
 ---
 
-___
-
 ## Justificación
 
-Como a los monos y chimpancés les encantó tanto nuestra aplicación decidimos que no íbamos a ser egoístas, por eso la vamos a compartir con ustedes. ¿Felices? Pues nosotros sí. Es hora de aprender un nuevo idioma que nos va a facilitar muchas cosas y además nos abrirá muchas puertas. <span style="background:yellow">[De nuevo, creo que los monos es algo para hacer reír o entretener, pero no es la justificación completa. Es necesario indicar que es una forma lúdica de aprender otro idioma, como lo hacen los niños en un contexto natural, que es amigable para ellos, o algo así. Bien puede estar dentro o disfrazado de una historia divertida, de monos o cualquier otro medio divertido, pero el mensaje importante no puede faltar]</span>
+Como a los monos y chimpancés les encantó tanto nuestra aplicación decidimos que no íbamos a ser egoístas, por eso la vamos a compartir con ustedes. ¿Felices? Pues nosotros sí. Es hora de aprender un nuevo idioma que nos va a facilitar muchas cosas y además nos abrirá muchas puertas. 
 
-<span style="background:yellow">[Utilizar la estructura del documento correctamente: títulos, párrafos, listas, etc. Arriba hice algunos de estos cambios]</span>
+<span style="background:yellow">[De nuevo, creo que los monos es algo para hacer reír o entretener, pero no es la justificación completa. Es necesario indicar que es una forma lúdica de aprender otro idioma, como lo hacen los niños en un contexto natural, que es amigable para ellos, o algo así. Bien puede estar dentro o disfrazado de una historia divertida, de monos o cualquier otro medio divertido, pero el mensaje importante no puede faltar]</span>
 
-- - -
-
-___
+---
 
 
 ## **Flujo del juego** 
+Esta aplicación está diseñada para que los usuarios aprendan gradualmente, es decir, se pretende iniciar desde un nivel de dificultad básico y poco a poco irlo aumentando. Esto con el fin de que se incie aprendiendo algunas palabras básicas, su significado, su pronunciación y escritura, luego se puedan formar oraciones, hasta poder ponerlas en práctica.
+
+ El usuario irá ganando **puntos de aprovechamiento** por nivel, que se pueden interpretar como los conocimientos que ha adquirido. ¿Que quiere decir esto? Entre mayor sean tus puntos de aprovechamiento, no solo podrás presumirlo a tus amigos, también significa que has aprendido lo que se pretendia y estarás mejor preparado para el siguiente nivel.
+
+Bueno, todo esto suena muy aburrido...¿no se suponía que los juegos son divertidos? Resulta que a medida que te incorpores a un nuevo nivel, encontrarás situaciones y retos que harán que demuestres toda tu creatividad y potencial. Cada nivel posee objetos únicos que debes encontrar, mover, tirar, gritarles e incluso comer! [Es importante resaltar que hasta el momento, nadie ha logrado este último...te retamos!]
+
+¿Qué tan seguido alguien te pide que corras hacia la habitación, tomes un zapato y lo tires por la ventana? ¿O que estes tendiendo la ropa, cuando de pronto alguien te grita para que le quites a un mono de la cabeza? ¡¡Y en un idioma completamente desconocido por supuesto!! Bueno aquí lo verás mucho, y tendrás que recurrir a todos los medios posibles para poder resolverlos a tiempo.
+
+<span style="background:yellow">[Hasta aquí fue lo que agregué, lo de abajo esta exactamente como antes. No se si les gustará o no, ahi lo ven!]</span>
+
 Al inicio el jugador podrá seleccionar el idioma que desea aprender. Una vez seleccionado, el jugador podrá seleccionar de un grupo de catergorías la que más le guste, esto con el fin de que inicie aprendiendo algunas palabras básicas y que serán clave para que pueda avanzar en el juego. Luego de que haya aprendido lo básico entonces estas palabra serán utilizadas en frases que tendrán significados un poco inusuales, como instrucciones que tiene que hacer con el objeto aprendido previamente. El usuario irá ganando **puntos de aprovechamiento** que se pueden interpretar como los conocimientos que ha adquirido.
 
 <span style="background:yellow">[Indicar que en cada nivel hay objetos y que el juego solicita encontrar esos objetos o hacer actividades con ellos. Esos objetos son los caracteres del juego. Es válido ser visionarios y decir que el juego puede proveer una situación problemática (ej: se quema algo en la cocina) y el jugador debe hacer algo para resolverla (decirle al personaje que está tendiendo ropa que corra a apagar la cocina), utilizando su voz en el micrófono del dispositivo...]</span>
 
 <span style="background:yellow">[Traten de listar en modo general los primeros tres o cinco niveles o mundos del juego]</span>
 
-- - -
-
-___
+---
 
 ## **Caracteres** 
 El juego se manejará por medio de un usuario, pero también estará presente un host (anfitrión) que será el encargado de ir dando las instrucciones del juego.
 
-- - -
-
-___
-
+---
 
 ##**Controles** 
 El juego será controlado por touchscreen del dispositivo móvil (tablet o smartphone), por medio del método de pick and drop en unos casos. Se creará una copia para PC la cual utilizará el ratón como el dedo en una tablet, con el mismo método de pick and drop.
 
-- - -
-
-___
+---
 
 ##**Integrantes**
 	1. Jonathan Fonseca
@@ -86,6 +84,7 @@ ___
 ---
 ___
 
+**Tabla de Contenidos**
 
 [TOC]
 
