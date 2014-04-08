@@ -1,6 +1,6 @@
 # CrazyWords
 
-![Ide del Juego]](Recursos/imágenes/Idea Juego.jpg)
+![Ide del Juego](Recursos/imágenes/Idea Juego.jpg)
 
 
 ¿Sabías que los monos y chimpancés que probaron esta aplicación se divirtieron tanto que no querían devolvernos las tablets? Con **CrazyWords** se divertirán tanto que hasta se olvidarán que están aprendiendo un nuevo idioma.  ¡Así es, van a aprender y jugar como nunca lo habían hecho! <span style="background:yellow">[Esto no es una descripción del juego, es un método comercial para llamar la atención del lector. No sé hasta qué punto sea adecuado. Suena a que es un juego para monos y que existe una implicación natural de lo que les gusta a los monos le gusta a las personas]</span> 
@@ -12,11 +12,14 @@ ___
 ## **Menú tentativo del juego 1:**
 
 ![Menú tentativo 1](Recursos/imágenes/Menu Inicial 2.png)
+
 ___
 
 ## **Menú tentativo del juego 2:**
 ![Menú tentativo 2](Recursos/imágenes/Menu Inicial 1.png)
-- - -
+
+---
+
 ___
 
 ## Ficha técnica
@@ -34,6 +37,7 @@ Productos similares
 2. **Lista de frases:** Se trata de una aplicación móvil en la que se pueden aprender frases y vocabulario nuevo. Comprende tanto audio para las pronunciaciones de las palabras, la palabra escrita y su transcripción fonética. Cuenta además con la opción de grabar audio para compararlo con la pronunciación real.
 
 ---
+
 ___
 
 ## Justificación
@@ -43,6 +47,7 @@ Como a los monos y chimpancés les encantó tanto nuestra aplicación decidimos 
 <span style="background:yellow">[Utilizar la estructura del documento correctamente: títulos, párrafos, listas, etc. Arriba hice algunos de estos cambios]</span>
 
 - - -
+
 ___
 
 
@@ -52,23 +57,31 @@ Al inicio el jugador podrá seleccionar el idioma que desea aprender. Una vez se
 <span style="background:yellow">[Indicar que en cada nivel hay objetos y que el juego solicita encontrar esos objetos o hacer actividades con ellos. Esos objetos son los caracteres del juego. Es válido ser visionarios y decir que el juego puede proveer una situación problemática (ej: se quema algo en la cocina) y el jugador debe hacer algo para resolverla (decirle al personaje que está tendiendo ropa que corra a apagar la cocina), utilizando su voz en el micrófono del dispositivo...]</span>
 
 <span style="background:yellow">[Traten de listar en modo general los primeros tres o cinco niveles o mundos del juego]</span>
+
 - - -
+
 ___
 
 ## **Caracteres:** 
 El juego se manejará por medio de un usuario, pero también estará presente un host (anfitrión) que será el encargado de ir dando las instrucciones del juego.
+
 - - -
+
 ___
 
 
 ##**Controles:** 
 El juego será controlado por touchscreen del dispositivo móvil (tablet o smartphone), por medio del método de pick and drop en unos casos. Se creará una copia para PC la cual utilizará el ratón como el dedo en una tablet, con el mismo método de pick and drop.
+
 - - -
+
 ___
 
 ##**Integrantes:**
 	1. Jonathan Fonseca
 	2. Daniel Herrera
 	3. Francisco Zúñiga
+
 ---
+
 ___
