@@ -30,7 +30,7 @@ Dado su gran potencial para el manejo táctil, las plataformas que se utilizará
 ### **Audiencia:**
 El juego estará enfocado en niños desde preescolar hasta primaria.
 
-Productos similares
+### **Productos similares:**
 
 1. **Duolingo:**  Es un juego tanto para dispositivos móviles como para Web. Consiste en aprender una serie de vocabulario al inicio del juego. Luego se aprenden frases con las palabras estudiadas. Si se desconoce alguna palabra que compone la frase se puede pulsar sobre la palabra y aparecerá su traducción. El avanza con respecto a los puntos que vaya ganando durante el juego, así se pueden ir desbloqueando secciones nuevas. Enlace: https://www.duolingo.com
 
@@ -56,9 +56,6 @@ Bueno, todo esto suena muy aburrido... ¿no se suponía que los juegos son diver
 
 ¿Qué tan seguido alguien te pide que corras hacia la habitación, tomes un zapato y lo tires por la ventana? ¿O que estés tendiendo la ropa, cuando de pronto alguien te grita para que le quites a un mono de la cabeza? ¡¡¡Y en un idioma completamente desconocido por supuesto!! Bueno aquí lo verás mucho, y tendrás que recurrir a todos los medios posibles para poder resolverlos a tiempo!!!
 
-<span style="background:yellow">[Hasta aquí fue lo que agregué, lo de abajo esta exactamente como antes. No se si les gustará o no, ahi lo ven!]</span>
-
-<span style="background:yellow">[Indicar que en cada nivel hay objetos y que el juego solicita encontrar esos objetos o hacer actividades con ellos. Esos objetos son los caracteres del juego. Es válido ser visionarios y decir que el juego puede proveer una situación problemática (ej: se quema algo en la cocina) y el jugador debe hacer algo para resolverla (decirle al personaje que está tendiendo ropa que corra a apagar la cocina), utilizando su voz en el micrófono del dispositivo...]</span>
 
 <span style="background:yellow">[Traten de listar en modo general los primeros tres o cinco niveles o mundos del juego]</span>
 
