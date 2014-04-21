@@ -56,7 +56,6 @@ Bueno, todo esto suena muy aburrido... ¿no se suponía que los juegos son diver
 
 ¿Qué tan seguido alguien te pide que corras hacia la habitación, tomes un zapato y lo tires por la ventana? ¿O que estés tendiendo la ropa, cuando de pronto alguien te grita para que le quites a un mono de la cabeza? ¡¡¡Y en un idioma completamente desconocido por supuesto!! Bueno aquí lo verás mucho, y tendrás que recurrir a todos los medios posibles para poder resolverlos a tiempo!!!
 
-<span style="background:yellow">[Traten de listar en modo general los primeros tres o cinco niveles o mundos del juego]</span>
 
 ---
 
