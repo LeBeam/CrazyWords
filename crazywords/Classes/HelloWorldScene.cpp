@@ -1,5 +1,16 @@
 #include "HelloWorldScene.h"
+<<<<<<< HEAD
 #include <SimpleAudioEngine.h>
+=======
+<<<<<<< HEAD
+#include <SimpleAudioEngine.h>
+=======
+<<<<<<< HEAD
+#include <SimpleAudioEngine.h>
+=======
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
 
 USING_NS_CC;
 
@@ -32,20 +43,74 @@ bool HelloWorld::init()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
     /////////////////////////////
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    // 2. add a menu item with "X" image, which is clicked to quit the program
+    //    you may modify it.
+
+    // add a "close" icon to exit the progress. it's an autorelease object
+    auto closeItem = MenuItemImage::create(
+                                           "CloseNormal.png",
+                                           "CloseSelected.png",
+                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    
+	closeItem->setPosition(Point(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
+                                origin.y + closeItem->getContentSize().height/2));
+
+    // create menu, it's an autorelease object
+    auto menu = Menu::create(closeItem, NULL);
+    menu->setPosition(Point::ZERO);
+    this->addChild(menu, 1);
+
+    /////////////////////////////
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
     // 3. add your codes below...
 
     // add a label shows "Hello World"
     // create and initialize a label
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
      auto label = LabelTTF::create("2014 LeBeam", "Arial", 11); 
     
     //position the label on the center of the screen
     label->setPosition(Point(origin.x + 50.0f ,origin.y + 15.0f));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    auto label = LabelTTF::create("Hello World", "Arial", 24);
+    
+    // position the label on the center of the screen
+    label->setPosition(Point(origin.x + visibleSize.width/2,
+                            origin.y + visibleSize.height - label->getContentSize().height));
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
 
     // add the label as a child to this layer
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
     auto sprite = Sprite::create("Menu/BackgroundMenu.png");
 
     // position the sprite on the center of the screen
@@ -61,10 +126,32 @@ bool HelloWorld::init()
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Music/SongMenu.mp3", true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    auto sprite = Sprite::create("HelloWorld.png");
+
+    // position the sprite on the center of the screen
+    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+
+    // add the sprite as a child to this layer
+    this->addChild(sprite, 0);
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
     
     return true;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
 void HelloWorld::createGameTitle()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -104,4 +191,23 @@ void HelloWorld::showAwards(Ref* pSender)
 
 void HelloWorld::showOptions(cocos2d::Ref* pSender)
 {
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+=======
+
+void HelloWorld::menuCloseCallback(Ref* pSender)
+{
+    Director::getInstance()->end();
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
+}
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
+>>>>>>> d59c670b8667257ad050cdd5bbc4a67881dacd76
+>>>>>>> 1f16d9765f6c1402837e5e1f245266b9122d1065
