@@ -11,6 +11,7 @@ public:
 
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
+<<<<<<< HEAD
 
 	// a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
@@ -33,6 +34,14 @@ private:
 
     /// Crea las opciones del menu del juego: los botones Iniciar, Premios, Opciones...
     void createGameMenu();
+=======
+    
+    // a selector callback
+    void menuCloseCallback(cocos2d::Ref* pSender);
+    
+    // implement the "static create()" method manually
+    CREATE_FUNC(HelloWorld);
+>>>>>>> dbb879cdaa0498ea5226cf7d144475efe5dbfe30
 };
 
 #endif // __HELLOWORLD_SCENE_H__
