@@ -34,21 +34,14 @@ bool HelloWorld::init()
     /////////////////////////////
     // 3. add your codes below...
 
+	 // Coloca etiqueta abajo a la izquierda del menú
      auto label = LabelTTF::create("2014 LeBeam", "Arial", 11); 
-    
-    //position the label on the center of the screen
-    label->setPosition(Point(origin.x + 50.0f ,origin.y + 15.0f));
+     label->setPosition(Point(origin.x + 50.0f ,origin.y + 15.0f));
+     this->addChild(label, 1);
 
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
+    // Coloca fondo de pantalla del menú
     auto sprite = Sprite::create("Menu/background.png");
-
-    // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
     this->addChild(sprite, 0);
 
 	createGameTitle();
@@ -137,12 +130,15 @@ void HelloWorld::showInstructions(Ref* pSender)
 	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
-
-void HelloWorld::showSettings(cocos2d::Ref* pSender)
+#include "SettingsScene.h"
+void HelloWorld::showSettings(Ref* pSender)
 {
+	auto newScene = SettingsScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
 
 void HelloWorld::exit(cocos2d::Ref* pSender)
 {
 }
+

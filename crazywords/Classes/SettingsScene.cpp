@@ -1,16 +1,16 @@
 
-#include "InstructionsScene.h"
+#include "SettingsScene.h"
 #include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
-Scene* InstructionsScene::createScene()
+Scene* SettingsScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
 
     // 'layer' is an autorelease object
-    auto layer = InstructionsScene::create();
+    auto layer = SettingsScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -20,7 +20,7 @@ Scene* InstructionsScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool InstructionsScene::init()
+bool SettingsScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -32,15 +32,10 @@ bool InstructionsScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-    // Crear el fondo del menu del juego
-    auto sprite = Sprite::create("Instructions_menu/bg_instructions.png");
-
-    // position the sprite on the center of the screen
+    // Crear el fondo del menu de ajustes
+    auto sprite = Sprite::create("Settings_menu/bg_settings.png");
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-	
 
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 
@@ -57,13 +52,13 @@ bool InstructionsScene::init()
     return true;
 }
 
-void InstructionsScene::createGameTitle()
+void SettingsScene::createGameTitle()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
     // Colocar la imagen estatica con el titulo o nombre del juego en la pantalla
-    auto gameTitle = Sprite::create("Instructions_menu/instructions_title0.png");
+    auto gameTitle = Sprite::create("Settings_menu/instructions_title0.png");
     gameTitle->setPosition(Point(visibleSize.width/2 * 1 + origin.x, visibleSize.height - gameTitle->getContentSize().height +30.0f));
     this->addChild(gameTitle, 0);
 
@@ -85,13 +80,13 @@ void InstructionsScene::createGameTitle()
 
 }
 
-void InstructionsScene::createMenu()
+void SettingsScene::createMenu()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	// Boton de la casita, para retornar al menu del juego, ubicado en la esquina superior izquierda
-	auto buttonHome = MenuItemImage::create("Instructions_menu/home_button.png", "Instructions_menu/home_button.png", CC_CALLBACK_1(InstructionsScene::returnGameMenu, this));
+	auto buttonHome = MenuItemImage::create("Settings_menu/return_button.png", "Settings_menu/return_button.png", CC_CALLBACK_1(SettingsScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
     buttonHomeMenu->setPosition(Point::ZERO);
@@ -99,10 +94,9 @@ void InstructionsScene::createMenu()
 }
 
 #include "HelloWorldScene.h"
-void InstructionsScene::returnGameMenu(Ref* pSender)
+void SettingsScene::returnGameMenu(Ref* pSender)
 {
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
 }
-
