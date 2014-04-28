@@ -15,6 +15,7 @@ public:
 	// a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     
+<<<<<<< HEAD
     /// Se invoca cuando el jugador presiona el boton 'New Game'
     void startGame(cocos2d::Ref* pSender);
 
@@ -26,6 +27,16 @@ public:
 
 	/// Se invoca cuando el jugador presiona el boton 'Exit'
 	void exit(cocos2d::Ref* pSender);
+=======
+    /// Se invoca cuando el jugador presiona el boton 'iniciar juego'
+    void startGame(cocos2d::Ref* pSender);
+	
+    /// Se invoca cuando el jugador presiona el boton 'Trofeos'
+    void showAwards(cocos2d::Ref* pSender);
+    
+    /// Se invoca cuando el jugador presiona el boton 'Opciones'
+    void showOptions(cocos2d::Ref* pSender);
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);

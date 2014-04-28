@@ -40,7 +40,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
 	EndGlobalSection
+=======
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
 EndGlobal

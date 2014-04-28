@@ -21,7 +21,10 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="InstructionsScene.cpp" />
+=======
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -33,14 +36,20 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="InstructionsScene.h" />
+=======
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
+=======
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
 </Project>

@@ -34,6 +34,12 @@ bool HelloWorld::init()
     /////////////////////////////
     // 3. add your codes below...
 
+<<<<<<< HEAD
+=======
+    // add a label shows "Hello World"
+    // create and initialize a label
+    
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
      auto label = LabelTTF::create("2014 LeBeam", "Arial", 11); 
     
     //position the label on the center of the screen
@@ -57,7 +63,11 @@ bool HelloWorld::init()
 	// Reproducir la musica del menu principal
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
+<<<<<<< HEAD
 	sound->playBackgroundMusic("Music/Song_menu.mp3", true);
+=======
+	sound->playBackgroundMusic("Music/SongMenu1.mp3", true);
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     
     return true;
 }
@@ -68,17 +78,29 @@ void HelloWorld::createGameTitle()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
     // Colocar la imagen estatica con el titulo o nombre del juego en la pantalla
+<<<<<<< HEAD
     auto gameTitle = Sprite::create("Menu/main_title0.png");
+=======
+    auto gameTitle = Sprite::create("Menu/bitmap0.png");
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     gameTitle->setPosition(Point(visibleSize.width/2 * 0.5 + origin.x, visibleSize.height - gameTitle->getContentSize().height +100.0f));
     this->addChild(gameTitle, 0);
 
 	auto animation = Animation::create();
 	for ( int i = 0; i < 4; ++i )
+<<<<<<< HEAD
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/main_title%i.png", i)->getCString() );
 	
 	// Y luego regresarla a su estado inicial
 	for ( int i = 3; i >= 0; --i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/main_title%i.png", i)->getCString() );
+=======
+		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/bitmap%i.png", i)->getCString() );
+	
+	// Y luego regresarla a su estado inicial
+	for ( int i = 3; i >= 0; --i )
+		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/bitmap%i.png", i)->getCString() );
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
 	
 	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
 	animation->setDelayPerUnit( 0.1333f );
@@ -103,21 +125,33 @@ void HelloWorld::createGameMenu()
     this->addChild(buttonJugarMenu, 2);
 
 	//Boton Ajustes
+<<<<<<< HEAD
     auto ajustesButton = MenuItemImage::create("Menu/settings_button1.png","Menu/settings_button2.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
+=======
+    auto ajustesButton = MenuItemImage::create("Menu/settings_button1.png","Menu/settings_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.0));
     auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
     buttonAjustesMenu->setPosition(Point::ZERO);
     this->addChild(buttonAjustesMenu, 2);
 
 	//Boton Instrucciones
+<<<<<<< HEAD
     auto instruccionesButton = MenuItemImage::create("Menu/instructions_button1.png","Menu/instructions_button2.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
+=======
+    auto instruccionesButton = MenuItemImage::create("Menu/instructions_button1.png","Menu/instructions_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     instruccionesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.5));
     auto buttonInstruccionesMenu = Menu::create(instruccionesButton, NULL);
     buttonInstruccionesMenu->setPosition(Point::ZERO);
     this->addChild(buttonInstruccionesMenu, 2);
 
 	//Boton Salir
+<<<<<<< HEAD
     auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(HelloWorld::exit, this));
+=======
+    auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
     exitButton->setPosition(Point(origin.x + visibleSize.width/2 * 0.6 ,origin.y+ visibleSize.height/2 * 0.5));
     auto buttonExitMenu = Menu::create(exitButton, NULL);
     buttonExitMenu->setPosition(Point::ZERO);
@@ -125,6 +159,7 @@ void HelloWorld::createGameMenu()
     
 }
 
+<<<<<<< HEAD
 void HelloWorld::startGame(Ref* pSender)
 {
 }
@@ -144,5 +179,18 @@ void HelloWorld::showSettings(cocos2d::Ref* pSender)
 
 
 void HelloWorld::exit(cocos2d::Ref* pSender)
+=======
+
+void HelloWorld::startGame(Ref* pSender)
+{
+
+}
+
+void HelloWorld::showAwards(Ref* pSender)
+{
+}
+
+void HelloWorld::showOptions(cocos2d::Ref* pSender)
+>>>>>>> 1bea57a05749fc4e11ec38ec721cbb6ea90d8956
 {
 }
