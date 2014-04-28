@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r"
+   sodipodi:docname="Documento nuevo 1">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter3881"
+       x="-0.066753467"
+       width="1.1335069"
+       y="-0.2473805"
+       height="1.494761">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3275515"
+         id="feGaussianBlur3883" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3885">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3275515"
+         id="feGaussianBlur3887" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3889">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3275515"
+         id="feGaussianBlur3891" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4047">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.9601784"
+         id="feGaussianBlur4049" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4051">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.9601784"
+         id="feGaussianBlur4053" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="78.770356"
+     inkscape:cy="49.844812"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-952.36218)">
+    <g
+       id="g3988"
+       transform="translate(-101.26779,-2.2728432)"
+       style="filter:url(#filter4051)"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\crazywords1\Resources\return_button.png"
+       inkscape:export-xdpi="83.693054"
+       inkscape:export-ydpi="83.693054">
+      <g
+         id="g4018"
+         transform="matrix(0.67878139,0,0,0.69911908,120.55765,307.1481)">
+        <rect
+           style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:0.09400222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+           id="rect3950"
+           width="66.233414"
+           height="16.940931"
+           x="-711.32202"
+           y="694.80322"
+           transform="matrix(0.69415331,-0.71982719,0.71303936,0.701124,0,0)"
+           ry="8.4704657" />
+        <rect
+           style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:0.09400222;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+           id="rect3950-7"
+           width="66.233414"
+           height="16.940931"
+           x="701.75305"
+           y="701.29712"
+           transform="matrix(0.71982719,0.69415331,-0.701124,0.71303936,0,0)"
+           ry="8.4704657" />
+        <rect
+           style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:0.10496145;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
+           id="rect3950-7-1"
+           width="82.629395"
+           height="16.930246"
+           x="-90.981422"
+           y="-1007.6355"
+           transform="matrix(-0.99998294,0.00584097,0.00304356,-0.99999537,0,0)"
+           ry="8.4651232" />
+      </g>
+    </g>
+    <path
+       style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:0.09400000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none;filter:url(#filter4047)"
+       d="M 49.28125 1.25 C 33.557254 1.5756835 18.268486 9.4502867 9.09375 23.65625 C -5.5858275 46.385791 0.95795865 76.726673 23.6875 91.40625 L 23.75 91.46875 C 46.476761 106.08405 76.746831 99.542079 91.40625 76.84375 C 106.08583 54.114209 99.573291 23.773327 76.84375 9.09375 C 68.320172 3.5889084 58.715648 1.0545899 49.28125 1.25 z M 49.9375 9.09375 C 57.963567 8.92751 66.123789 11.0669 73.375 15.75 C 92.711562 28.238266 98.269516 54.038438 85.78125 73.375 C 73.310133 92.685009 47.552946 98.246085 28.21875 85.8125 L 28.15625 85.78125 C 8.8196882 73.292984 3.261734 47.492812 15.75 28.15625 C 23.555166 16.070899 36.560722 9.3708167 49.9375 9.09375 z "
+       transform="translate(0,952.36218)"
+       id="path3997"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\crazywords1\Resources\return_button.png"
+       inkscape:export-xdpi="83.693054"
+       inkscape:export-ydpi="83.693054" />
+  </g>
+</svg>
