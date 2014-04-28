@@ -1,4 +1,5 @@
 /crazywords/cocos2d
 
-/crazywords/proj.win32/Debug.win32
-/crazywords/proj.win32/crazywords.sdf
+Debug.win32
+*.sdf
+*.dxg
