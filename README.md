@@ -13,11 +13,10 @@ Este juego les ayudará a aprender un nuevo idioma (en este caso inglés), por m
 
 ## **Menú tentativo del juego 1**
 
-![Menú tentativo 1](Recursos/imágenes/Menu Inicial 2.png)
+![Menú Principal](Recursos/imágenes/menu_inicio.png)
 
 
-## **Menú tentativo del juego 2**
-![Menú tentativo 2](Recursos/imágenes/Menu Inicial 1.png)
+
 
 ---
 
