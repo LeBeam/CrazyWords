@@ -97,28 +97,28 @@ void HelloWorld::createGameMenu()
 
 	//Boton Jugar
     auto jugarButton = MenuItemImage::create("Menu/game_button1.png","Menu/game_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
-    jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.5));
+    jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.7));
     auto buttonJugarMenu = Menu::create(jugarButton, NULL);
     buttonJugarMenu->setPosition(Point::ZERO);
     this->addChild(buttonJugarMenu, 2);
 
 	//Boton Ajustes
     auto ajustesButton = MenuItemImage::create("Menu/settings_button1.png","Menu/settings_button2.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
-    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.0));
+    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
     auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
     buttonAjustesMenu->setPosition(Point::ZERO);
     this->addChild(buttonAjustesMenu, 2);
 
 	//Boton Instrucciones
     auto instruccionesButton = MenuItemImage::create("Menu/instructions_button1.png","Menu/instructions_button2.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
-    instruccionesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.5));
+    instruccionesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.7));
     auto buttonInstruccionesMenu = Menu::create(instruccionesButton, NULL);
     buttonInstruccionesMenu->setPosition(Point::ZERO);
     this->addChild(buttonInstruccionesMenu, 2);
 
 	//Boton Salir
     auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(HelloWorld::exit, this));
-    exitButton->setPosition(Point(origin.x + visibleSize.width/2 * 0.6 ,origin.y+ visibleSize.height/2 * 0.5));
+    exitButton->setPosition(Point(origin.x + visibleSize.width/2 * 0.6 ,origin.y+ visibleSize.height/2 * 0.7));
     auto buttonExitMenu = Menu::create(exitButton, NULL);
     buttonExitMenu->setPosition(Point::ZERO);
     this->addChild(buttonExitMenu, 2);

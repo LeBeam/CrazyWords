@@ -20,6 +20,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
+	// Los graficos estan disennados para 1024x768
+	glview->setDesignResolutionSize(1024, 768, ResolutionPolicy::EXACT_FIT);
+
+	
+	#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
+	    // En PC se puede cambiar el tamanno de la ventana, en dispositivos moviles el tamanno es fijo
+	    glview->setFrameSize(1024, 768);
+	#endif
+
     // turn on display FPS
     director->setDisplayStats(false);
 
