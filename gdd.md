@@ -5,7 +5,7 @@
 
 ¿Sabías que los monos y chimpancés que probaron esta aplicación se divirtieron tanto que no querían devolvernos las tablets? Con **CrazyWords** se divertirán tanto que hasta se olvidarán que están aprendiendo un nuevo idioma.  ¡Así es, van a aprender y jugar como nunca lo habían hecho! 
 
-Este juego les ayudará a aprender un nuevo idioma (en este caso inglés), por medio de actividades un poco alocadas que les permitirán aprender desde palabras hasta frases, tal y como si lo estuvieran haciendo en un ambiente nativo de aprendizaje. La idea de este juego es que ustedes se sometan <span style="background:yellow">[Un juego es una actividad voluntaria. Someterse suena un tanto contradictorio. Sugerencia: "participen"]</span> a actividades un poco inusuales para resolver un problema que se les presentaremos. Luego esas palabras las utilizarán en frases que también estarán fuera de lo común. Cada palabra y frase contará además de su significado y su pronunciación, para que se familiaricen más con el idioma. <span style="background:yellow">[Pasar de actividades/problemas a palabras. Parece al revés. Primero el jugador/aprendiz se familiariza con palabras sencillas/frases sencillas, y luego palabras sofisticadas/frases complejas. En todas ellas hay situaciones que el jugador debe resolver o intervenir]</span>
+Este juego les ayudará a aprender un nuevo idioma (en este caso inglés), por medio de actividades un poco alocadas que les permitirán aprender desde palabras hasta frases, tal y como si lo estuvieran haciendo en un ambiente nativo de aprendizaje. La idea de este juego es que ustedes se sometan a actividades un poco inusuales para resolver un problema que se les presentaremos. Luego esas palabras las utilizarán en frases que también estarán fuera de lo común. Cada palabra y frase contará además de su significado y su pronunciación, para que se familiaricen más con el idioma.
 
 ++**Nota:**++ Ya nos gustaría que los monos y chimpancés aprendieran idiomas y se divierten tanto como ustedes con esta aplicación.
 
@@ -20,17 +20,17 @@ Este juego les ayudará a aprender un nuevo idioma (en este caso inglés), por m
 ![Menú tentativo 2](Recursos/imágenes/Menu Inicial 1.png)
 
 ---
-<span style="background:yellow">[Restauré las imágenes. Por qué eliminaron de control de cambios. Las van a reemplazar por las que ya están usando en el juego de cocos2d-x?]</span>
+
 
 ## Ficha técnica
 
 ### **Plataformas destino:**
-Dado su gran potencial para el manejo táctil, las plataformas que se utilizarán serán ambas para dispositivos móviles, específicamente Android e iOS.
+Dado su gran potencial para el manejo táctil, las plataformas que se utilizarán serán ambas para dispositivos móviles, específicamente Android y iOS.
 
 ### **Audiencia:**
 El juego estará enfocado en niños desde preescolar hasta primaria.
 
-### Productos similares
+Productos similares
 
 1. **Duolingo:**  Es un juego tanto para dispositivos móviles como para Web. Consiste en aprender una serie de vocabulario al inicio del juego. Luego se aprenden frases con las palabras estudiadas. Si se desconoce alguna palabra que compone la frase se puede pulsar sobre la palabra y aparecerá su traducción. El avanza con respecto a los puntos que vaya ganando durante el juego, así se pueden ir desbloqueando secciones nuevas. Enlace: https://www.duolingo.com
 
@@ -42,7 +42,7 @@ El juego estará enfocado en niños desde preescolar hasta primaria.
 
 Como a los monos y chimpancés les encantó tanto nuestra aplicación decidimos que no íbamos a ser egoístas, por eso la vamos a compartir con ustedes.
 
-Ahora si poniéndonos un poco serios, la idea de crear una aplicación para aprender idiomas surge porque pensamos que la comunicación en nuestro mundo actual cada vez va rompiendo barreras geográficas y culturales, por eso no podemos dejar de lado el ámbito linguístico. Además cabe destacar que el aprendizaje se facilita mucho en nuestras etapas más tempranas de vida, por eso decidimos que la aplicación iba a estar dirigida a los niños y que aparte de eso iba a ser entretenida, lúdica y creativa. Todo esto se asemeja al ambiente natural en el cual aprendemos nuestro idioma materno. Para ya no aburrirlos más es hora de aprender un nuevo idioma que nos va a facilitar la comunicación y además nos abrirá muchas puertas. <span style="background:yellow">[Quitar o cambiar esto de "ponernos serios" o "no aburrir más". Tal vez sea mejor un enfoque diferente. Decir que aprender otro idioma es divertido, ofrece muchas posibilidades (viajar, entender series en otro idioma, tener amigos en el mundo, etc.), pero que para aprender otro idioma no hemos encontrado una aplicación que lo haga de forma natural, divertida, etc. como lo aprendería un niño... Por esto inventamos CrazyWords en nuestro laboratorio de lenguas {poner una caricatura risible de un laboratorio con lenguas por todo lado}, y mientras lo probábamos se contagiaron nuestros monos...]</span>
+Ahora si poniéndonos un poco serios, la idea de crear una aplicación para aprender idiomas surge porque pensamos que la comunicación en nuestro mundo actual cada vez va rompiendo barreras geográficas y culturales, por eso no podemos dejar de lado el ámbito linguístico. Además cabe destacar que el aprendizaje se facilita mucho en nuestras etapas más tempranas de vida, por eso decidimos que la aplicación iba a estar dirigida a los niños y que aparte de eso iba a ser entretenida, lúdica y creativa. Todo esto se asemeja al ambiente natural en el cual aprendemos nuestro idioma materno. Para ya no aburrirlos más es hora de aprender un nuevo idioma que nos va a facilitar la comunicación y además nos abrirá muchas puertas. 
 
 ---
 
@@ -52,18 +52,16 @@ Esta aplicación está diseñada para que como usuario aprendas gradualmente, es
 
 Irás ganando **puntos de aprovechamiento** por nivel, que se pueden interpretar como los conocimientos que has adquirido. ¿Qué quiere decir esto? Que entre mayor sean tus puntos de aprovechamiento (que podrás presumirlos a tus amigos) más has aprendido, esto significa que has aprendido lo que se pretendía y estarás mejor preparado para el siguiente nivel.
 
-Bueno, todo esto suena muy aburrido... ¿no se suponía que los juegos son divertidos? <span style="background:yellow">[No necesariamente]</span> Pues así es, resulta que a medida que te incorpores a un nuevo nivel, encontrarás situaciones y retos que harán que demuestres toda tu creatividad y potencial. Cada nivel posee objetos únicos que debes encontrar, mover, tirar, gritarles e incluso comer! [Es importante resaltar que hasta el momento, nadie ha logrado este último...te retamos!]
+Bueno, todo esto suena muy aburrido... ¿no se suponía que los juegos son divertidos? Pues así es, resulta que a medida que te incorpores a un nuevo nivel, encontrarás situaciones y retos que harán que demuestres toda tu creatividad y potencial. Cada nivel posee objetos únicos que debes encontrar, mover, tirar, gritarles e incluso comer! [Es importante resaltar que hasta el momento, nadie ha logrado este último...te retamos!]
 
 ¿Qué tan seguido alguien te pide que corras hacia la habitación, tomes un zapato y lo tires por la ventana? ¿O que estés tendiendo la ropa, cuando de pronto alguien te grita para que le quites a un mono de la cabeza? ¡¡¡Y en un idioma completamente desconocido por supuesto!! Bueno aquí lo verás mucho, y tendrás que recurrir a todos los medios posibles para poder resolverlos a tiempo!!!
 
 <span style="background:yellow">[Traten de listar en modo general los primeros tres o cinco niveles o mundos del juego]</span>
 
-<span style="background:yellow">[Esto es sumamente importante. Aún la idea se mantiene muy vaga sin al menos el gameplay del primer nivel.]</span>
-
 ---
 
 ## **Caracteres** 
-El juego será manejado por el usuario. Pero no te preocupes habrá un host (anfitrión) que te indicará que es lo que debes hacer en cada uno de los niveles. Él te dará las instrucciones de cada actividad a desarrollar en el idioma que vas a aprender. <span style="background:yellow">[Podría ser que el jugador haya sido contrado como asistente del laboratorio de lenguas, invitado por un amigo que trabaja ahí. El amigo habla español y le da las instrucciones en los primeros niveles, luego el amigo empieza a ocuparse de sus labores y aparece menos frecuentemente, más adelante hay que irle a pedir ayuda explícitamente cuando el jugador no entiende, y en los niveles más avanzados del juego lo mueven a otra sede y ya el jugador no puede preguntarle más (debe "jugársela" en inglés)]</span> También por nivel habrán objetos especiales que te darán puntos de aprovechamiento extra, pero eso sí deberás descubrir de que se trata el objeto oculto con respecto a las actividades que desarrollaste en niveles anteriores. <span style="background:yellow">[No es nada claro que son estos "objetos especiales". Al menos dar un ejemplo]</span>
+El juego será manejado por el usuario. Pero no te preocupes habrá un host (anfitrión) que te indicará que es lo que debes hacer en cada uno de los niveles. Él te dará las instrucciones de cada actividad a desarrollar en el idioma que vas a aprender. También por nivel habrán objetos especiales que te darán puntos de aprovechamiento extra, pero eso sí deberás descubrir de que se trata el objeto oculto con respecto a las actividades que desarrollaste en niveles anteriores.
 
 ---
 
