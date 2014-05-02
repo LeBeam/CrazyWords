@@ -19,11 +19,9 @@ Scene* InstructionsScene::createScene()
     return scene;
 }
 
-// on "init" you need to initialize your instance
+/// on "init" you need to initialize your instance
 bool InstructionsScene::init()
 {
-    //////////////////////////////
-    // 1. super init first
     if ( !Layer::init() )
     {
         return false;

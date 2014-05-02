@@ -22,8 +22,7 @@ Scene* SettingsScene::createScene()
 // on "init" you need to initialize your instance
 bool SettingsScene::init()
 {
-    //////////////////////////////
-    // 1. super init first
+  
     if ( !Layer::init() )
     {
         return false;

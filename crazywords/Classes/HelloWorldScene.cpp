@@ -5,8 +5,8 @@ USING_NS_CC;
 
 Scene* HelloWorld::createScene()
 {
-    /// 'scene' is an autorelease object
-    auto scene = Scene::create();
+    ///'scene' is an autorelease object
+    auto scene = Scene::create();	/** \var  */
     
     /// 'layer' is an autorelease object
     auto layer = HelloWorld::create();
@@ -21,8 +21,7 @@ Scene* HelloWorld::createScene()
 /// on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    //////////////////////////////
-    // 1. super init first
+  
     if ( !Layer::init() )
     {
         return false;
@@ -31,8 +30,6 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 3. add your codes below...
 
 	 /// Coloca etiqueta abajo a la izquierda del menú
      auto label = LabelTTF::create("2014 LeBeam", "Arial", 11); 
