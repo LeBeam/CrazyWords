@@ -132,6 +132,8 @@ void SettingsScene::returnGameMenu(Ref* pSender)
 
 void SettingsScene::turnOnOffMusic(cocos2d::Ref* pSender)
 {
+	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
 }
 
 void SettingsScene::turnOnOffSound(cocos2d::Ref* pSender)
