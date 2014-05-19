@@ -31,6 +31,22 @@ private:
 
 	/// Crea las opciones del menu, como el icono para regresar al menu del juego
 	void createMenu();
+
+	void setBackgroundMenu();
+
+	void setMouseClickEffect();
+
+	void setBackgroundMusic();
+
+	void setSoundEffectsButton();
+
+	void setSoundEffectsLabel();
+
+	void setMusicButton();
+
+	void setMusicLabel();
+
+	void setHomeButton();
 };
 
 #endif // SettingsScene

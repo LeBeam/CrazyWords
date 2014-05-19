@@ -23,36 +23,40 @@ Scene* InstructionsScene::createScene()
 bool InstructionsScene::init()
 {
     if ( !Layer::init() )
-    {
         return false;
-    }
 
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Point origin = Director::getInstance()->getVisibleOrigin();
-
-    /// Crear el fondo del menu del juego
-    auto sprite = Sprite::create("Instructions_menu/bg_instructions.png");
-
-    /// position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    /// add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-	
-
-	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
-
+	setBackgroundMenu();
+	setMouseClickEffect();
 	createGameTitle();
 	createMenu();
-    
-	/// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	/// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	/// ilustrativos
+    setBackgroundMusic();
+
+    return true;
+}
+
+void InstructionsScene::setBackgroundMenu()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto sprite = Sprite::create("Instructions_menu/bg_instructions.png");
+    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(sprite, 0);
+}
+
+void InstructionsScene::setMouseClickEffect()
+{
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
+}
+
+/// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
+/// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
+/// ilustrativos
+void InstructionsScene::setBackgroundMusic()
+{
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Music/Game_general_music.mp3", true);
-
-    return true;
 }
 
 void InstructionsScene::createGameTitle()

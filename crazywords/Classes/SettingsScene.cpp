@@ -24,31 +24,40 @@ bool SettingsScene::init()
 {
   
     if ( !Layer::init() )
-    {
         return false;
-    }
 
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+	setBackgroundMenu();
+	setMouseClickEffect();
+	createGameTitle();
+	createMenu();
+	setBackgroundMusic();
+
+    return true;
+}
+
+void SettingsScene::setBackgroundMenu()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-    /// Crear el fondo del menu de ajustes
     auto sprite = Sprite::create("Settings_menu/bg_settings.png");
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(sprite, 0);
+}
 
+void SettingsScene::setMouseClickEffect()
+{
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
+}
 
-	createGameTitle();
-	createMenu();
-    
+void SettingsScene::setBackgroundMusic()
+{
 	/// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
 	/// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
 	/// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Music/Game_general_music.mp3", true);
-
-    return true;
 }
 
 void SettingsScene::createGameTitle()
@@ -81,7 +90,16 @@ void SettingsScene::createGameTitle()
 
 void SettingsScene::createMenu()
 {
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+	setHomeButton();
+	setMusicLabel();
+	setMusicButton();
+	setSoundEffectsLabel();
+	setSoundEffectsButton();
+}
+
+void SettingsScene::setHomeButton()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Boton de la casita, para retornar al menu del juego, ubicado en la esquina superior izquierda
@@ -90,6 +108,12 @@ void SettingsScene::createMenu()
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
     buttonHomeMenu->setPosition(Point::ZERO);
     this->addChild(buttonHomeMenu, 2);
+}
+
+void SettingsScene::setMusicLabel()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Etiqueta de musica, hace referencia a la activacion o desactivacion de la musica de fondo del juego
 	// Esta etiqueta no debe regresar al menu principal, no debe realizar ninguna accion, simplemente se esta utilizando como prueba
@@ -98,6 +122,12 @@ void SettingsScene::createMenu()
 	auto labelMusicMenu = Menu::create(labelMusic, NULL);
 	labelMusicMenu->setPosition(Point::ZERO);
 	this->addChild(labelMusicMenu, 2);
+}
+
+void SettingsScene::setMusicButton()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Boton de musica, permite la activacion o desactivacion de la musica de fondo del juego
 	auto buttonMusic = MenuItemImage::create("Settings_menu/onoffmusic_button0.png", "Settings_menu/onoffmusic_button1.png", CC_CALLBACK_1(SettingsScene::turnOnOffMusic, this));
@@ -105,6 +135,12 @@ void SettingsScene::createMenu()
 	auto buttonMusicMenu = Menu::create(buttonMusic, NULL);
 	buttonMusicMenu->setPosition(Point::ZERO);
 	this->addChild(buttonMusicMenu, 2);
+}
+
+void SettingsScene::setSoundEffectsLabel()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Etiqueta de sonido, hace referencia a la activacion o desactivacion de los efectos de sonido del juego
 	// Esta etiqueta no debe regresar al menu principal, no debe realizar ninguna accion, simplemente se esta utilizando como prueba
@@ -113,6 +149,12 @@ void SettingsScene::createMenu()
 	auto labelSoundMenu = Menu::create(labelSound, NULL);
 	labelSoundMenu->setPosition(Point::ZERO);
 	this->addChild(labelSoundMenu, 2);
+}
+
+void SettingsScene::setSoundEffectsButton()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Boton de sonido, permite la activacion o desactivacion de los efectos de sonido del juego
 	auto buttonSound = MenuItemImage::create("Settings_menu/onoffsounds_button0.png", "Settings_menu/onoffsounds_button1.png", CC_CALLBACK_1(SettingsScene::turnOnOffSound, this));
