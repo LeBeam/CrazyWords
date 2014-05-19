@@ -66,7 +66,7 @@ void HelloWorld::createGameTitle()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	auto gameTitle = Sprite::create("Menu/main_title0.png");
-    gameTitle->setPosition(Point(visibleSize.width/2 * 0.5 + origin.x, visibleSize.height - gameTitle->getContentSize().height +100.0f));
+    gameTitle->setPosition(Point(visibleSize.width/2 * 0.5 + origin.x, visibleSize.height - gameTitle->getContentSize().height -05.0f));
     this->addChild(gameTitle, 0);   
 
 	auto animation = Animation::create();
@@ -91,7 +91,8 @@ void HelloWorld::createGameMenu()
 	setPlayButton();
 	setSettingsButton();
 	setInstructionsButton();
-	setExitButton();
+	if (!(CC_TARGET_PLATFORM == CC_PLATFORM_WIN32))
+		setExitButton();
 }
 
 void HelloWorld::setPlayButton()
