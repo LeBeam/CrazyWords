@@ -833,9 +833,9 @@
        y="735.87988"
        ry="56.303585"
        transform="matrix(0.76086839,0,0,0.5516239,-1116.2255,367.46751)"
-       inkscape:export-filename="C:\Users\Francisco\Desktop\CW1\crazywords1\Resources\Menu\instructions_button1.png"
-       inkscape:export-xdpi="87.417213"
-       inkscape:export-ydpi="87.417213" />
+       inkscape:export-filename="C:\Users\Francisco\Desktop\instructions_button0.png"
+       inkscape:export-xdpi="58.872818"
+       inkscape:export-ydpi="58.872818" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3068-8"
@@ -959,9 +959,9 @@
        id="text4123"
        sodipodi:linespacing="125%"
        transform="scale(0.93190711,1.0730683)"
-       inkscape:export-filename="C:\Users\Francisco\Desktop\CW1\crazywords1\Resources\Menu\instructions_button1.png"
-       inkscape:export-xdpi="87.417213"
-       inkscape:export-ydpi="87.417213"><tspan
+       inkscape:export-filename="C:\Users\Francisco\Desktop\instructions_button0.png"
+       inkscape:export-xdpi="58.872818"
+       inkscape:export-ydpi="58.872818"><tspan
          sodipodi:role="line"
          id="tspan4125"
          x="-999.79114"
@@ -1138,7 +1138,7 @@
            height="155"
            x="-194"
            y="-471.99997" /></flowRegion><flowPara
-         id="flowPara3142"></flowPara></flowRoot>    <flowRoot
+         id="flowPara3142" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3165"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Sans;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -1148,7 +1148,7 @@
            height="132"
            x="204"
            y="-203.99998" /></flowRegion><flowPara
-         id="flowPara3171"></flowPara></flowRoot>    <text
+         id="flowPara3171" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:49.39941406px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="-961.00507"
@@ -1200,9 +1200,9 @@
        y="735.87988"
        ry="56.303585"
        transform="matrix(0.77114117,0,0,0.57349303,-778.06124,350.22033)"
-       inkscape:export-filename="C:\Users\Francisco\Desktop\CW1\crazywords1\Resources\Menu\instructions_button2.png"
-       inkscape:export-xdpi="86.323524"
-       inkscape:export-ydpi="86.323524" />
+       inkscape:export-filename="C:\Users\Francisco\Desktop\instructions_button1.png"
+       inkscape:export-xdpi="58.343819"
+       inkscape:export-ydpi="58.343819" />
     <text
        xml:space="preserve"
        style="font-size:45.58824158px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1211,9 +1211,9 @@
        id="text4123-5"
        sodipodi:linespacing="125%"
        transform="scale(0.92011532,1.0868203)"
-       inkscape:export-filename="C:\Users\Francisco\Desktop\CW1\crazywords1\Resources\Menu\instructions_button2.png"
-       inkscape:export-xdpi="86.323524"
-       inkscape:export-ydpi="86.323524"><tspan
+       inkscape:export-filename="C:\Users\Francisco\Desktop\instructions_button1.png"
+       inkscape:export-xdpi="58.343819"
+       inkscape:export-ydpi="58.343819"><tspan
          sodipodi:role="line"
          id="tspan4125-7"
          x="-653.24103"
@@ -1285,5 +1285,5 @@
            height="499"
            x="-208"
            y="-531" /></flowRegion><flowPara
-         id="flowPara3457"></flowPara></flowRoot>  </g>
+         id="flowPara3457" /></flowRoot>  </g>
 </svg>

@@ -57,7 +57,7 @@ void HelloWorld::setMenuMusic()
 {
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/Song_menu.mp3", true);
+	sound->playBackgroundMusic("Music/mariachi_snooze.mp3", true);
 }
 
 void HelloWorld::createGameTitle()
@@ -101,7 +101,7 @@ void HelloWorld::setPlayButton()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	auto jugarButton = MenuItemImage::create("Menu/game_button1.png","Menu/game_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
-    jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.7));
+    jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
     auto buttonJugarMenu = Menu::create(jugarButton, NULL);
     buttonJugarMenu->setPosition(Point::ZERO);
     this->addChild(buttonJugarMenu, 2);
@@ -112,8 +112,8 @@ void HelloWorld::setSettingsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto ajustesButton = MenuItemImage::create("Menu/settings_button1.png","Menu/settings_button2.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
-    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
+	auto ajustesButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
+    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
     auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
     buttonAjustesMenu->setPosition(Point::ZERO);
     this->addChild(buttonAjustesMenu, 2);
@@ -124,7 +124,7 @@ void HelloWorld::setInstructionsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto instruccionesButton = MenuItemImage::create("Menu/instructions_button1.png","Menu/instructions_button2.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
+	auto instruccionesButton = MenuItemImage::create("Menu/instructions_button0.png","Menu/instructions_button1.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
     instruccionesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.7));
     auto buttonInstruccionesMenu = Menu::create(instruccionesButton, NULL);
     buttonInstruccionesMenu->setPosition(Point::ZERO);
@@ -161,7 +161,7 @@ void HelloWorld::showSettings(Ref* pSender)
 {
 	/// Se crea la escena y la transicion para la pantalla de Configuraciones
 	auto newScene = SettingsScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
 }
 
 

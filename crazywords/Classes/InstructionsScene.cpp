@@ -28,8 +28,9 @@ bool InstructionsScene::init()
 	setBackgroundMenu();
 	setMouseClickEffect();
 	createGameTitle();
-	createMenu();
+	setHomeButton();
     setBackgroundMusic();
+	setSettingsButton();
 
     return true;
 }
@@ -87,7 +88,7 @@ void InstructionsScene::createGameTitle()
 
 }
 
-void InstructionsScene::createMenu()
+void InstructionsScene::setHomeButton()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
@@ -100,6 +101,27 @@ void InstructionsScene::createMenu()
     this->addChild(buttonHomeMenu, 2);
 }
 
+void InstructionsScene::setSettingsButton()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto ajustesButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(InstructionsScene::showSettings, this));
+    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
+    auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
+    buttonAjustesMenu->setPosition(Point::ZERO);
+    this->addChild(buttonAjustesMenu, 2);
+}
+
+#include "SettingsScene.h"
+void InstructionsScene::showSettings(Ref* pSender)
+{
+	/// Se crea la escena y la transicion para la pantalla de Configuraciones
+	auto newScene = SettingsScene::createScene();
+	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
+}
+
+
 #include "HelloWorldScene.h"
 void InstructionsScene::returnGameMenu(Ref* pSender)
 {
@@ -107,4 +129,6 @@ void InstructionsScene::returnGameMenu(Ref* pSender)
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
 }
+
+
 

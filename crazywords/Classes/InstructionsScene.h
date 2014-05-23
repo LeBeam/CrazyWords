@@ -16,8 +16,12 @@ public:
     /// Se invoca cuando el jugador presiona el boton 'regresar al inicio'
     void returnGameMenu(cocos2d::Ref* pSender);
 
+	void showSettings(cocos2d::Ref* pSender);
+
     // implement the "static create()" method manually
     CREATE_FUNC(InstructionsScene);
+	
+	
 
 private:
 
@@ -25,13 +29,16 @@ private:
     void createGameTitle();
 
 	/// Crea las opciones del menu, como el icono para regresar al menu del juego
-	void createMenu();
+	void setHomeButton();
 
 	void setBackgroundMenu();
 
 	void setMouseClickEffect();
 
+	void setSettingsButton();
+
 	void setBackgroundMusic();
+
 };
 
 #endif // InstructionsScene

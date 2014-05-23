@@ -30,7 +30,6 @@ bool SettingsScene::init()
 	setMouseClickEffect();
 	createGameTitle();
 	createMenu();
-	setBackgroundMusic();
 
     return true;
 }
@@ -50,15 +49,6 @@ void SettingsScene::setMouseClickEffect()
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
 
-void SettingsScene::setBackgroundMusic()
-{
-	/// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	/// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	/// ilustrativos
-	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/Game_general_music.mp3", true);
-}
 
 void SettingsScene::createGameTitle()
 {
@@ -168,8 +158,7 @@ void SettingsScene::setSoundEffectsButton()
 void SettingsScene::returnGameMenu(Ref* pSender)
 {
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
-	auto newScene = HelloWorld::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
+	Director::getInstance()->popScene();
 }
 
 void SettingsScene::turnOnOffMusic(cocos2d::Ref* pSender)

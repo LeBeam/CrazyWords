@@ -36,8 +36,6 @@ private:
 
 	void setMouseClickEffect();
 
-	void setBackgroundMusic();
-
 	void setSoundEffectsButton();
 
 	void setSoundEffectsLabel();
