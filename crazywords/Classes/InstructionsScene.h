@@ -6,43 +6,43 @@
 
 class InstructionsScene : public cocos2d::Layer
 {
-public:
-	// there's no 'id' in cpp, so we recommend returning the class instance pointer
-	static cocos2d::Scene* createScene();
+	public:
+		// there's no 'id' in cpp, so we recommend returning the class instance pointer
+		static cocos2d::Scene* createScene();
 
-	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-	virtual bool init();
+		// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+		virtual bool init();
 
-	/// It is called when the player touches the "Return" button
-	void returnGameMenu(cocos2d::Ref* pSender);
+		/// It is called when the player touches the "Return" button
+		void returnGameMenu(cocos2d::Ref* pSender);
 
-	/// Creates the whole Settings Scene and the transition to this scene.
-	void showSettings(cocos2d::Ref* pSender);
+		/// Creates the whole Settings Scene and the transition to this scene.
+		void showSettings(cocos2d::Ref* pSender);
 
-	// implement the "static create()" method manually
-	CREATE_FUNC(InstructionsScene);
+		// implement the "static create()" method manually
+		CREATE_FUNC(InstructionsScene);
 
 
 
-private:
+	private:
 
-	/// Creates, places and animates the scene title.
-	void createGameTitle();
+		/// Creates, places and animates the scene title.
+		void createGameTitle();
 
-	/// Creates the home button and places it on the screen.
-	void setHomeButton();
+		/// Creates the home button and places it on the screen.
+		void setHomeButton();
 
-	/// Creates and places the background for the Instructions Scene.
-	void setBackground();
+		/// Creates and places the background for the Instructions Scene.
+		void setBackground();
 
-	/// Set the touch sound effect which will be played when the player touches any button
-	void setTouchSoundEffect();
+		/// Set the touch sound effect which will be played when the player touches any button
+		void setTouchSoundEffect();
 
-	/// Creates and places the button that gets you to the Settings Scene
-	void setSettingsButton();
+		/// Creates and places the button that gets you to the Settings Scene
+		void setSettingsButton();
 
-	/// Set the background music for the Instructions Scene
-	void setBackgroundMusic();
+		/// Set the background music for the Instructions Scene
+		void setBackgroundMusic();
 };
 
 #endif // InstructionsScene

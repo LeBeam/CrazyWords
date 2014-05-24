@@ -15,7 +15,7 @@ class HelloWorld : public cocos2d::Layer
 		/// a selector callback
 		void menuCloseCallback(cocos2d::Ref* pSender);
     
-		/// It is called when the player touches the "New Game" button and gets the player to the New Game Scene.
+		/// It is called when the player touches the "User_Name" button and gets the player to the New Game Scene.
 		void startGame(cocos2d::Ref* pSender);
 
 		/// It is called when the player touches the "Instructions" button and gets the player to the Instructions Scene.

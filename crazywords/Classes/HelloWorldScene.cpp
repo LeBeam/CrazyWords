@@ -100,7 +100,7 @@ void HelloWorld::setPlayButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto jugarButton = MenuItemImage::create("Menu/game_button1.png","Menu/game_button2.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+	auto jugarButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(HelloWorld::startGame, this));
     jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
     auto buttonJugarMenu = Menu::create(jugarButton, NULL);
     buttonJugarMenu->setPosition(Point::ZERO);
@@ -143,8 +143,13 @@ void HelloWorld::setExitButton()
     this->addChild(buttonExitMenu, 2);
 }
 
+
+#include "StartGameScene.h"
 void HelloWorld::startGame(Ref* pSender)
 {
+	// Se crea la escena y la transicion para la pantalla de iniciar el juego
+	auto newScene = StartGameScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
 

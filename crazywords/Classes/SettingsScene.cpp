@@ -157,7 +157,7 @@ void SettingsScene::setSoundEffectsButton()
 #include "HelloWorldScene.h"
 void SettingsScene::returnGameMenu(Ref* pSender)
 {
-	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
+	SettingsScene::setTouchSoundEffect();
 	Director::getInstance()->popScene();
 }
 

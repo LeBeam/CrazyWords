@@ -56,8 +56,7 @@ void InstructionsScene::setTouchSoundEffect()
 void InstructionsScene::setBackgroundMusic()
 {
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/Game_general_music.mp3", true);
+	sound->resumeBackgroundMusic();
 }
 
 void InstructionsScene::createGameTitle()
@@ -123,9 +122,10 @@ void InstructionsScene::showSettings(Ref* pSender)
 #include "HelloWorldScene.h"
 void InstructionsScene::returnGameMenu(Ref* pSender)
 {
-	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
+	InstructionsScene::setTouchSoundEffect();
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
+
 }
 
 
