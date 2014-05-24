@@ -15,7 +15,7 @@
    height="150"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.4 r"
    sodipodi:docname="trabajomenu.svg">
   <defs
      id="defs4">
@@ -365,45 +365,6 @@
        y2="273.9556" />
     <filter
        inkscape:collect="always"
-       id="filter7383-4-8"
-       x="-0.073608637"
-       width="1.1472173"
-       y="-0.18793277"
-       height="1.3758655"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="10.409833"
-         id="feGaussianBlur7385-8-8" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter7387-5"
-       x="-0.073608637"
-       width="1.1472173"
-       y="-0.18793277"
-       height="1.3758655"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="10.409833"
-         id="feGaussianBlur7389-1" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter7383-1"
-       x="-0.073608637"
-       width="1.1472173"
-       y="-0.18793277"
-       height="1.3758655"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="10.409833"
-         id="feGaussianBlur7385-1" />
-    </filter>
-    <filter
-       inkscape:collect="always"
        id="filter7383-6"
        x="-0.073608637"
        width="1.1472173"
@@ -454,6 +415,32 @@
          stdDeviation="10.409833"
          id="feGaussianBlur7385-8-9" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter7383-6-6"
+       x="-0.073608637"
+       width="1.1472173"
+       y="-0.18793277"
+       height="1.3758655"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="10.409833"
+         id="feGaussianBlur7385-14-6" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter7383-6-1"
+       x="-0.073608637"
+       width="1.1472173"
+       y="-0.18793277"
+       height="1.3758655"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="10.409833"
+         id="feGaussianBlur7385-14-0" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -468,8 +455,8 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -1285,5 +1272,59 @@
            height="499"
            x="-208"
            y="-531" /></flowRegion><flowPara
-         id="flowPara3457" /></flowRoot>  </g>
+         id="flowPara3457" /></flowRoot>    <rect
+       style="fill:#800080;filter:url(#filter7383-6-6)"
+       id="rect3033-6-2-1"
+       width="339.41125"
+       height="132.93903"
+       x="211.62695"
+       y="884.06787"
+       ry="56.303585"
+       transform="matrix(0.79682313,0,0,0.56255847,-466.85462,264.62924)"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame1_button.png"
+       inkscape:export-xdpi="83.54129"
+       inkscape:export-ydpi="83.54129" />
+    <text
+       xml:space="preserve"
+       style="font-size:90px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Comica BD;-inkscape-font-specification:Comica BD"
+       x="-247"
+       y="809.36212"
+       id="text3198"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame1_button.png"
+       inkscape:export-xdpi="83.54129"
+       inkscape:export-ydpi="83.54129"><tspan
+         sodipodi:role="line"
+         id="tspan3200"
+         x="-247"
+         y="809.36212"
+         style="font-size:48px">Continue</tspan></text>
+    <rect
+       style="fill:#00aad4;filter:url(#filter7383-6-1)"
+       id="rect3033-6-2-9"
+       width="339.41125"
+       height="132.93903"
+       x="211.62695"
+       y="884.06787"
+       ry="56.303585"
+       transform="matrix(0.79682313,0,0,0.56255847,-465.85462,375.62924)"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame2_button.png"
+       inkscape:export-xdpi="83.54129"
+       inkscape:export-ydpi="83.54129" />
+    <text
+       xml:space="preserve"
+       style="font-size:90px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Comica BD;-inkscape-font-specification:Comica BD"
+       x="-254.66016"
+       y="921.33087"
+       id="text3198-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame2_button.png"
+       inkscape:export-xdpi="83.54129"
+       inkscape:export-ydpi="83.54129"><tspan
+         sodipodi:role="line"
+         id="tspan3200-3"
+         x="-254.66016"
+         y="921.33087"
+         style="font-size:48px">Continuar</tspan></text>
+  </g>
 </svg>
