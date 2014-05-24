@@ -93,11 +93,11 @@ void SettingsScene::setHomeButton()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Boton de la casita, para retornar al menu del juego, ubicado en la esquina superior izquierda
-	auto buttonHome = MenuItemImage::create("Settings_menu/return_button.png", "Settings_menu/return_button.png", CC_CALLBACK_1(SettingsScene::returnGameMenu, this));
-	buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
-    auto buttonHomeMenu = Menu::create(buttonHome, NULL);
-    buttonHomeMenu->setPosition(Point::ZERO);
-    this->addChild(buttonHomeMenu, 2);
+	auto homeButton = MenuItemImage::create("Settings_menu/return_button.png", "Settings_menu/return_button.png", CC_CALLBACK_1(SettingsScene::returnGameMenu, this));
+	homeButton->setPosition(Point(origin.x + homeButton->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - homeButton->getContentSize().height / 2.0f - 5.0f));
+    auto homeMenuButton = Menu::create(homeButton, NULL);
+    homeMenuButton->setPosition(Point::ZERO);
+    this->addChild(homeMenuButton, 2);
 }
 
 void SettingsScene::setMusicLabel()
@@ -107,11 +107,11 @@ void SettingsScene::setMusicLabel()
 
 	/// Etiqueta de musica, hace referencia a la activacion o desactivacion de la musica de fondo del juego
 	// Esta etiqueta no debe regresar al menu principal, no debe realizar ninguna accion, simplemente se esta utilizando como prueba
-	auto labelMusic = MenuItemImage::create("Settings_menu/music_button1.png", "Settings_menu/music_button2.png", CC_CALLBACK_1(SettingsScene::returnGameMenu, this));
-	labelMusic->setPosition(Point(origin.x + visibleSize.width / 2.0f * 0.9 , origin.y + visibleSize.height / 2 * 1.2));
-	auto labelMusicMenu = Menu::create(labelMusic, NULL);
-	labelMusicMenu->setPosition(Point::ZERO);
-	this->addChild(labelMusicMenu, 2);
+	auto musicLabel = MenuItemImage::create("Settings_menu/music_button1.png", "Settings_menu/music_button2.png", CC_CALLBACK_1(SettingsScene::returnGameMenu, this));
+	musicLabel->setPosition(Point(origin.x + visibleSize.width / 2.0f * 0.9 , origin.y + visibleSize.height / 2 * 1.2));
+	auto musicMenuLabel = Menu::create(musicLabel, NULL);
+	musicMenuLabel->setPosition(Point::ZERO);
+	this->addChild(musicMenuLabel, 2);
 }
 
 void SettingsScene::setMusicButton()
@@ -120,11 +120,11 @@ void SettingsScene::setMusicButton()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	/// Boton de musica, permite la activacion o desactivacion de la musica de fondo del juego
-	auto buttonMusic = MenuItemImage::create("Settings_menu/onoffmusic_button0.png", "Settings_menu/onoffmusic_button1.png", CC_CALLBACK_1(SettingsScene::turnOnOffMusic, this));
-	buttonMusic->setPosition(Point(origin.x + visibleSize.width / 2.0f * 1.3, origin.y + visibleSize.height / 2 * 1.2));
-	auto buttonMusicMenu = Menu::create(buttonMusic, NULL);
-	buttonMusicMenu->setPosition(Point::ZERO);
-	this->addChild(buttonMusicMenu, 2);
+	auto musicButton = MenuItemImage::create("Settings_menu/onoffmusic_button0.png", "Settings_menu/onoffmusic_button1.png", CC_CALLBACK_1(SettingsScene::turnOnOffMusic, this));
+	musicButton->setPosition(Point(origin.x + visibleSize.width / 2.0f * 1.3, origin.y + visibleSize.height / 2 * 1.2));
+	auto musicMenuButton = Menu::create(musicButton, NULL);
+	musicMenuButton->setPosition(Point::ZERO);
+	this->addChild(musicMenuButton, 2);
 }
 
 void SettingsScene::setSoundEffectsLabel()

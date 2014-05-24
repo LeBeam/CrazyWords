@@ -92,11 +92,11 @@ void InstructionsScene::setHomeButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto buttonHome = MenuItemImage::create("Instructions_menu/home_button.png", "Instructions_menu/home_button.png", CC_CALLBACK_1(InstructionsScene::returnGameMenu, this));
-	buttonHome->setPosition(Point(origin.x + buttonHome->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - buttonHome->getContentSize().height / 2.0f - 5.0f));
-	auto buttonHomeMenu = Menu::create(buttonHome, NULL);
-	buttonHomeMenu->setPosition(Point::ZERO);
-	this->addChild(buttonHomeMenu, 2);
+	auto homeButton = MenuItemImage::create("Instructions_menu/home_button.png", "Instructions_menu/home_button.png", CC_CALLBACK_1(InstructionsScene::returnGameMenu, this));
+	homeButton->setPosition(Point(origin.x + homeButton->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - homeButton->getContentSize().height / 2.0f - 5.0f));
+	auto homeMenuButton = Menu::create(homeButton, NULL);
+	homeMenuButton->setPosition(Point::ZERO);
+	this->addChild(homeMenuButton, 2);
 }
 
 void InstructionsScene::setSettingsButton()
@@ -104,11 +104,11 @@ void InstructionsScene::setSettingsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto ajustesButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(InstructionsScene::showSettings, this));
-	ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
-	auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
-	buttonAjustesMenu->setPosition(Point::ZERO);
-	this->addChild(buttonAjustesMenu, 2);
+	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(InstructionsScene::showSettings, this));
+	settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
+	auto settingsMenuButton = Menu::create(settingsButton, NULL);
+	settingsMenuButton->setPosition(Point::ZERO);
+	this->addChild(settingsMenuButton, 2);
 }
 
 #include "SettingsScene.h"

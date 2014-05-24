@@ -46,11 +46,11 @@ void StartGameScene::setSettingsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto ajustesButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(StartGameScene::showSettings, this));
-	ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
-	auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
-	buttonAjustesMenu->setPosition(Point::ZERO);
-	this->addChild(buttonAjustesMenu, 2);
+	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(StartGameScene::showSettings, this));
+	settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
+	auto settingsMenuButton = Menu::create(settingsButton, NULL);
+	settingsMenuButton->setPosition(Point::ZERO);
+	this->addChild(settingsMenuButton, 2);
 }
 
 #include "SettingsScene.h"

@@ -73,14 +73,14 @@ void HelloWorld::createGameTitle()
 	for ( int i = 0; i < 4; ++i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/main_title%i.png", i)->getCString() );
 	
-	/// Y luego regresarla a su estado inicial
+	// Y luego regresarla a su estado inicial
 	for ( int i = 3; i >= 0; --i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/main_title%i.png", i)->getCString() );
 	
-	/// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
+	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
 	animation->setDelayPerUnit( 0.1333f );
 	
-	/// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de menu del juego este visible
+	// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de menu del juego este visible
 	auto repeatAnimation = RepeatForever::create( Animate::create(animation) );
 	gameTitle->runAction(repeatAnimation);
 
@@ -100,11 +100,11 @@ void HelloWorld::setPlayButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto jugarButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(HelloWorld::startGame, this));
-    jugarButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
-    auto buttonJugarMenu = Menu::create(jugarButton, NULL);
-    buttonJugarMenu->setPosition(Point::ZERO);
-    this->addChild(buttonJugarMenu, 2);
+	auto playButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+    playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
+    auto playMenuButton = Menu::create(playButton, NULL);
+    playMenuButton->setPosition(Point::ZERO);
+    this->addChild(playMenuButton, 2);
 }
 
 void HelloWorld::setSettingsButton()
@@ -112,11 +112,11 @@ void HelloWorld::setSettingsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto ajustesButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
-    ajustesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
-    auto buttonAjustesMenu = Menu::create(ajustesButton, NULL);
-    buttonAjustesMenu->setPosition(Point::ZERO);
-    this->addChild(buttonAjustesMenu, 2);
+	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
+    settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
+    auto settingsMenuButton = Menu::create(settingsButton, NULL);
+    settingsMenuButton->setPosition(Point::ZERO);
+    this->addChild(settingsMenuButton, 2);
 }
 
 void HelloWorld::setInstructionsButton()
@@ -124,11 +124,11 @@ void HelloWorld::setInstructionsButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto instruccionesButton = MenuItemImage::create("Menu/instructions_button0.png","Menu/instructions_button1.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
-    instruccionesButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.7));
-    auto buttonInstruccionesMenu = Menu::create(instruccionesButton, NULL);
-    buttonInstruccionesMenu->setPosition(Point::ZERO);
-    this->addChild(buttonInstruccionesMenu, 2);
+	auto instructionsButton = MenuItemImage::create("Menu/instructions_button0.png","Menu/instructions_button1.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
+    instructionsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.7));
+    auto instructionsMenuButton = Menu::create(instructionsButton, NULL);
+    instructionsMenuButton->setPosition(Point::ZERO);
+    this->addChild(instructionsMenuButton, 2);
 }
 
 void HelloWorld::setExitButton()
@@ -138,9 +138,9 @@ void HelloWorld::setExitButton()
 
 	auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(HelloWorld::exit, this));
     exitButton->setPosition(Point(origin.x + visibleSize.width/2 * 0.6 ,origin.y+ visibleSize.height/2 * 0.7));
-    auto buttonExitMenu = Menu::create(exitButton, NULL);
-    buttonExitMenu->setPosition(Point::ZERO);
-    this->addChild(buttonExitMenu, 2);
+    auto exitMenuButton = Menu::create(exitButton, NULL);
+    exitMenuButton->setPosition(Point::ZERO);
+    this->addChild(exitMenuButton, 2);
 }
 
 
