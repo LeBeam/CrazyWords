@@ -6,14 +6,14 @@
 class SettingsScene : public cocos2d::Layer
 {
 public:
-    // there's no 'id' in cpp, so we recommend returning the class instance pointer
-    static cocos2d::Scene* createScene();
+	// there's no 'id' in cpp, so we recommend returning the class instance pointer
+	static cocos2d::Scene* createScene();
 
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-    virtual bool init();
+	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+	virtual bool init();
 
-    /// It is called when the player touches the "Return" button
-    void returnGameMenu(cocos2d::Ref* pSender);
+	/// It is called when the player touches the "Return" button
+	void returnGameMenu(cocos2d::Ref* pSender);
 
 	/// It is called when the player touches the "Music On/Off" button, this method turns on and turns off the background music 
 	void turnOnOffMusic(cocos2d::Ref* pSender);
@@ -21,13 +21,13 @@ public:
 	/// It is called when the player touches the "Effects On/Off" button, this method turns on and turns off the effect sounds
 	void turnOnOffSound(cocos2d::Ref* pSender);
 
-    // implement the "static create()" method manually
-    CREATE_FUNC(SettingsScene);
+	// implement the "static create()" method manually
+	CREATE_FUNC(SettingsScene);
 
 private:
 
 	/// Creates, places and animates the scene title.
-    void createGameTitle();
+	void createGameTitle();
 
 	/// Creates and places the menu options, as well as the "Home" button.
 	void createMenu();

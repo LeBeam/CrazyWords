@@ -8,7 +8,7 @@
 class StartGameScene : public cocos2d::Layer
 {
 public:
-	
+
 	static cocos2d::Scene* createScene();
 
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
@@ -29,7 +29,7 @@ private:
 	void setBackground();
 
 	/// Creates and places the button that gets you to the Settings Scene
-    void setSettingsButton();
+	void setSettingsButton();
 
 };
 
