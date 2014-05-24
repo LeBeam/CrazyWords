@@ -4,4 +4,14 @@ Debug.win32
 *.sdf
 *.dxg
 *.suo
+*.so
 Documentation
+assets/
+bin/
+obj/
+
+/crazywords/proj.android/.settings/org.eclipse.jdt.core.prefs
+
+/crazywords/proj.android/gen/com/github/crazywords/BuildConfig.java
+
+/crazywords/proj.android/gen/com/github/crazywords/R.java
