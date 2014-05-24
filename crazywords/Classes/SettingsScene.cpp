@@ -6,16 +6,16 @@ USING_NS_CC;
 
 Scene* SettingsScene::createScene()
 {
-    /// 'scene' is an autorelease object
+    // 'scene' is an autorelease object
     auto scene = Scene::create();
 
-    /// 'layer' is an autorelease object
+    // 'layer' is an autorelease object
     auto layer = SettingsScene::create();
 
-    /// add layer as a child to scene
+    // add layer as a child to scene
     scene->addChild(layer);
 
-    /// return the scene
+    // return the scene
     return scene;
 }
 
@@ -26,15 +26,15 @@ bool SettingsScene::init()
     if ( !Layer::init() )
         return false;
 
-	setBackgroundMenu();
-	setMouseClickEffect();
+	setBackground();
+	setTouchSoundEffect();
 	createGameTitle();
 	createMenu();
 
     return true;
 }
 
-void SettingsScene::setBackgroundMenu()
+void SettingsScene::setBackground()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
@@ -44,7 +44,7 @@ void SettingsScene::setBackgroundMenu()
     this->addChild(sprite, 0);
 }
 
-void SettingsScene::setMouseClickEffect()
+void SettingsScene::setTouchSoundEffect()
 {
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
