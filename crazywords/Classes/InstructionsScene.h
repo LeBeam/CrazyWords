@@ -7,38 +7,42 @@
 class InstructionsScene : public cocos2d::Layer
 {
 public:
-    /// there's no 'id' in cpp, so we recommend returning the class instance pointer
-    static cocos2d::Scene* createScene();
+	// there's no 'id' in cpp, so we recommend returning the class instance pointer
+	static cocos2d::Scene* createScene();
 
-    /// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-    virtual bool init();
+	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+	virtual bool init();
 
-    /// Se invoca cuando el jugador presiona el boton 'regresar al inicio'
-    void returnGameMenu(cocos2d::Ref* pSender);
+	/// It is called when the player touches the "Return" button
+	void returnGameMenu(cocos2d::Ref* pSender);
 
+	/// Creates the whole Settings Scene and the transition to this scene.
 	void showSettings(cocos2d::Ref* pSender);
 
-    // implement the "static create()" method manually
-    CREATE_FUNC(InstructionsScene);
-	
-	
+	// implement the "static create()" method manually
+	CREATE_FUNC(InstructionsScene);
+
+
 
 private:
 
-	/// Crea el titulo del juego y lo anima
-    void createGameTitle();
+	/// Creates, places and animates the scene title.
+	void createGameTitle();
 
-	/// Crea las opciones del menu, como el icono para regresar al menu del juego
+	/// Creates the home button and places it on the screen.
 	void setHomeButton();
 
-	void setBackgroundMenu();
+	/// Creates and places the background for the Instructions Scene.
+	void setBackground();
 
-	void setMouseClickEffect();
+	/// Set the touch sound effect which will be played when the player touches any button
+	void setTouchSoundEffect();
 
+	/// Creates and places the button that gets you to the Settings Scene
 	void setSettingsButton();
 
+	/// Set the background music for the Instructions Scene
 	void setBackgroundMusic();
-
 };
 
 #endif // InstructionsScene

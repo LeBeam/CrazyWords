@@ -25,7 +25,7 @@ bool HelloWorld::init()
         return false;
     
 	setPersonalLabel();
-	setBackgroundMenu();
+	setBackground();
 	createGameTitle();
 	createGameMenu();
 	setMenuMusic();
@@ -43,7 +43,7 @@ void HelloWorld::setPersonalLabel()
     this->addChild(label, 1);
 }
 
-void HelloWorld::setBackgroundMenu()
+void HelloWorld::setBackground()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
@@ -151,7 +151,7 @@ void HelloWorld::startGame(Ref* pSender)
 #include "InstructionsScene.h"
 void HelloWorld::showInstructions(Ref* pSender)
 {
-	/// Se crea la escena y la transicion para la pantalla de Instrucciones
+	// Se crea la escena y la transicion para la pantalla de Instrucciones
 	auto newScene = InstructionsScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
@@ -159,7 +159,7 @@ void HelloWorld::showInstructions(Ref* pSender)
 #include "SettingsScene.h"
 void HelloWorld::showSettings(Ref* pSender)
 {
-	/// Se crea la escena y la transicion para la pantalla de Configuraciones
+	// Se crea la escena y la transicion para la pantalla de Configuraciones
 	auto newScene = SettingsScene::createScene();
 	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
 }
