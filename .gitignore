@@ -15,3 +15,64 @@ obj/
 /crazywords/proj.android/gen/com/github/crazywords/BuildConfig.java
 
 /crazywords/proj.android/gen/com/github/crazywords/R.java
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.pyc
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Cocos2d-x
+cocos2d
+cocos2dx
+
+# Output directories
+#doc/api/
+
+# Mac OS X
+.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+#Python modules
+MANIFEST
+dist/
+build/
+
+# Backup files
+*~.nib
+\#*#
+.#*
+
+# Android projects
+assets/
+libs/
+obj/
+bin/
+gen/
+local.properties
+
+# QtCreator
+*build-*/
+*.user
+
+# Visual Studio
+*.sdf
+*.suo
+Debug.win32/
+Release.win32/
