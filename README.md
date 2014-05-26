@@ -1,6 +1,6 @@
 # CrazyWords
 
-![Ide del Juego](Recursos/imágenes/Idea Juego.jpg)
+
 
 
 ¿Sabías que los monos y chimpancés que probaron esta aplicación se divirtieron tanto que no querían devolvernos las tablets? Con **CrazyWords** se divertirán tanto que hasta se olvidarán que están aprendiendo un nuevo idioma.  ¡Así es, van a aprender y jugar como nunca lo habían hecho!
@@ -13,7 +13,7 @@ Este juego les ayudará a aprender un nuevo idioma (en este caso inglés), por m
 
 ## **Menú tentativo del juego 1**
 
-![Menú Principal](Recursos/imágenes/menu_inicio.png)
+![Menú Principal](Resources/img-md/menu_inicio.png)
 
 
 
@@ -59,7 +59,7 @@ Creemos que los juegos deberían ser divertidos, por eso a medida que te incorpo
 
 ###Nivel 1###
 
-![Nivel 1](Recursos/imágenes/scene1.png)
+![Nivel 1](Resources/img-md/scene1.png)
 
 Sabemos por nuestra basta experiencia que una de las mejores maneras de aprender Inglés o un idioma cualquiera, es empezar por conocer palabras simples de uso cotiano, de hecho es así como nosotros fuimos adentrandonos en el habla del Español desde que éramos niños.
 
