@@ -1,6 +1,6 @@
-
 #include "StartGameScene.h"
 #include <SimpleAudioEngine.h>
+#include "Util.h"
 
 USING_NS_CC;
 
@@ -27,6 +27,7 @@ bool StartGameScene::init()
 
 	setBackground();
 	setSettingsButton();
+	showAnimals();
 
 	return true;
 }
@@ -53,6 +54,50 @@ void StartGameScene::setSettingsButton()
 	this->addChild(settingsMenuButton, 2);
 }
 
+void StartGameScene::showAnimals()
+{
+	for(int i = 1; i <= 5; i++)
+	{
+		for(int j = 1; j <= 4; j++)
+		{
+			std::string chosenAnimal = "dog";
+
+			Size visibleSize = Director::getInstance()->getVisibleSize();
+			Point origin = Director::getInstance()->getVisibleOrigin();
+
+			auto animalSprite = Sprite::create("objects/"+chosenAnimal+".png");
+			animalSprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+			this->addChild(animalSprite, 3);
+		}
+
+	}
+
+}
+
+/*
+void StartGameScene::showAnimals()
+{
+for(int i = 0; i < 5; i++)
+{
+for(int j = 0; j < 4; j++)
+{
+for(int k = 0; k<(i*j); k++)
+{
+int random = rand() % 20;
+std::string randomAnimal = Util::getAnimal(random);
+
+Size visibleSize = Director::getInstance()->getVisibleSize();
+Point origin = Director::getInstance()->getVisibleOrigin();
+
+auto animalSprite = Sprite::create("Resources/objects/"+randomAnimal+".png");
+}
+
+}
+
+}
+
+}
+*/
 #include "SettingsScene.h"
 void StartGameScene::showSettings(Ref* pSender)
 {

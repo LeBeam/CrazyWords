@@ -1,13 +1,14 @@
-
 #ifndef StartGameScene_h
 #define StartGameScene_h
 
-
 #include "cocos2d.h"
+#include <ctime>
+#include <cstdlib>
 
 class StartGameScene : public cocos2d::Layer
 {
 public:
+	cocos2d::Sprite *animalSprite;
 
 	static cocos2d::Scene* createScene();
 
@@ -31,6 +32,7 @@ private:
 	/// Creates and places the button that gets you to the Settings Scene
 	void setSettingsButton();
 
+	void showAnimals();
 };
 
 #endif // StartGameScene
