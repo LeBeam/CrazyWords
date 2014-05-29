@@ -91,7 +91,7 @@ void HelloWorld::createGameMenu()
 	setPlayButton();
 	setSettingsButton();
 	setInstructionsButton();
-	if (!(CC_TARGET_PLATFORM == CC_PLATFORM_WIN32))
+	if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
 		setExitButton();
 }
 
@@ -143,7 +143,6 @@ void HelloWorld::setExitButton()
 	this->addChild(exitMenuButton, 2);
 }
 
-
 #include "StartGameScene.h"
 void HelloWorld::startGame(Ref* pSender)
 {
@@ -172,5 +171,6 @@ void HelloWorld::showSettings(Ref* pSender)
 
 void HelloWorld::exit(cocos2d::Ref* pSender)
 {
+	Director::getInstance()->end();
 }
 

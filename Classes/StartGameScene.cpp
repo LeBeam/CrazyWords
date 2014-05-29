@@ -27,6 +27,7 @@ bool StartGameScene::init()
 
 	setBackground();
 	setSettingsButton();
+	setHomeButton();
 	showAnimals();
 
 	return true;
@@ -54,50 +55,89 @@ void StartGameScene::setSettingsButton()
 	this->addChild(settingsMenuButton, 2);
 }
 
+void StartGameScene::setHomeButton()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto homeButton = MenuItemImage::create("game_scenes/home_button.png", "game_scenes/home_button.png", CC_CALLBACK_1(StartGameScene::returnGameMenu, this));
+	homeButton->setPosition(Point(origin.x + homeButton->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - homeButton->getContentSize().height / 2.0f - 5.0f));
+	auto homeMenuButton = Menu::create(homeButton, NULL);
+	homeMenuButton->setPosition(Point::ZERO);
+	this->addChild(homeMenuButton, 2);
+}
+
+void StartGameScene::setTouchSoundEffect()
+{
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
+}
+
 void StartGameScene::showAnimals()
 {
 	for(int i = 1; i <= 5; i++)
 	{
 		for(int j = 1; j <= 4; j++)
 		{
-			std::string chosenAnimal = "dog";
-
-			Size visibleSize = Director::getInstance()->getVisibleSize();
-			Point origin = Director::getInstance()->getVisibleOrigin();
-
-			auto animalSprite = Sprite::create("objects/"+chosenAnimal+".png");
-			animalSprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-			this->addChild(animalSprite, 3);
+			setChosenAnimal("dog", i, j);
+			setEventHandlers();
 		}
 
 	}
 
 }
 
-/*
-void StartGameScene::showAnimals()
+void StartGameScene::setChosenAnimal(std::string chosenAnimal, int i, int j)
 {
-for(int i = 0; i < 5; i++)
-{
-for(int j = 0; j < 4; j++)
-{
-for(int k = 0; k<(i*j); k++)
-{
-int random = rand() % 20;
-std::string randomAnimal = Util::getAnimal(random);
+	std::string cAnimal = chosenAnimal;
+	int ii = i;
+	int jj = j;
 
-Size visibleSize = Director::getInstance()->getVisibleSize();
-Point origin = Director::getInstance()->getVisibleOrigin();
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
 
-auto animalSprite = Sprite::create("Resources/objects/"+randomAnimal+".png");
+	auto animalSprite = Sprite::create("objects/"+cAnimal+".png");
+	animalSprite->setPosition(Point(origin.x + (ii *175), origin.y + (jj *130) + 110));
+	this->addChild(animalSprite, 3);
 }
 
+void StartGameScene::placeAnimalPronunciation()
+{
+	//std::string cAnimal = chosenAnimal;
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/dog.mp3"); 
 }
 
+void StartGameScene::setEventHandlers()
+{
+	//Create a "one by one" touch event listener (processes one touch at a time)
+	auto listener = EventListenerTouchOneByOne::create();
+	// When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
+	listener->setSwallowTouches(true);
+
+	// Example of using a lambda expression to implement onTouchBegan event callback function
+	listener->onTouchBegan = [](Touch* touch, Event* event)
+	{
+		// event->getCurrentTarget() returns the *listener's* sceneGraphPriority node.
+		auto target = static_cast<StartGameScene*>(event->getCurrentTarget());
+
+		//Get the position of the current point relative to the button
+		Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+		Size s = target->getContentSize();
+		Rect rect = Rect(0, 0, s.width, s.height);
+
+		//Check the click area
+		if (rect.containsPoint(locationInNode))
+		{
+			target->stopAllActions();
+			target->placeAnimalPronunciation();
+			return true;
+		}
+		return false;
+	};
+
+	//Add listener
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 }
 
-}
-*/
 #include "SettingsScene.h"
 void StartGameScene::showSettings(Ref* pSender)
 {
@@ -105,5 +145,13 @@ void StartGameScene::showSettings(Ref* pSender)
 	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
 }
 
+#include "HelloWorldScene.h"
+void StartGameScene::returnGameMenu(Ref* pSender)
+{
+	StartGameScene::setTouchSoundEffect();
+	auto newScene = HelloWorld::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
+
+}
 
 

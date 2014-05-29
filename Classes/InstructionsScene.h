@@ -13,16 +13,20 @@ public:
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
 	virtual bool init();
 
-	/// It is called when the player touches the "Return" button
+	/**
+	@brief  It is called when the player touches the "Return" button.
+	@param pSender  The reference to the return button
+	*/
 	void returnGameMenu(cocos2d::Ref* pSender);
 
-	/// Creates the whole Settings Scene and the transition to this scene.
+	/**
+	@brief  Creates the whole Settings Scene and the transition to this scene.
+	@param pSender  The reference to the Settings Scene
+	*/
 	void showSettings(cocos2d::Ref* pSender);
 
 	// implement the "static create()" method manually
 	CREATE_FUNC(InstructionsScene);
-
-
 
 private:
 

@@ -50,9 +50,6 @@ void InstructionsScene::setTouchSoundEffect()
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
 
-/// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-/// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-/// ilustrativos
 void InstructionsScene::setBackgroundMusic()
 {
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
@@ -125,7 +122,6 @@ void InstructionsScene::returnGameMenu(Ref* pSender)
 	InstructionsScene::setTouchSoundEffect();
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
-
 }
 
 

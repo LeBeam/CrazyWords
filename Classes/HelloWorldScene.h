@@ -22,32 +22,26 @@ public:
 	virtual bool init();  
 
 	/**
-	@brief  a selector callback
-	@param pSender  the prueba
-	*/
-	void menuCloseCallback(cocos2d::Ref* pSender);
-
-	/**
 	@brief  It is called when the player touches the "New Game" button and gets the player to the New Game Scene.
-	@param pSender  the prueba
+	@param pSender  The reference to the New Game Scene
 	*/
 	void startGame(cocos2d::Ref* pSender);
 
 	/**
 	@brief  It is called when the player touches the "Instructions" button and gets the player to the Instructions Scene.
-	@param pSender  the prueba 
+	@param pSender  The reference to the Instructions Scene
 	*/ 
 	void showInstructions(cocos2d::Ref* pSender);
 
 	/**
 	@brief  It is called when the player touches the "Settings" button and gets the player to the Settings Scene.
-	@param pSender  the prueba
+	@param pSender  The reference to the Settings Scene
 	*/
 	void showSettings(cocos2d::Ref* pSender);
 
 	/**
 	@brief  It is called when the player touches the "Exit" button. This will be only available on a PC.
-	@param pSender  the prueba
+	@param pSender  The reference to the exit button
 	*/
 	void exit(cocos2d::Ref* pSender);
 
