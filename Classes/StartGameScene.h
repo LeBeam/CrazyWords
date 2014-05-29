@@ -32,16 +32,24 @@ public:
 
 private: 
 
-	/// Creates and places the background for the Instructions Scene.
+	/**
+	@brief  Creates and places the background for the Instructions Scene.
+	*/
 	void setBackground();
 
-	/// Creates and places the button that gets you to the Settings Scene.
+	/**
+	@brief  Creates and places the button that gets you to the Settings Scene.
+	*/
 	void setSettingsButton();
 
-	/// Creates and places the button that gets back to the Home Scene.
+	/**
+	@brief  Creates and places the button that gets back to the Home Scene.
+	*/
 	void setHomeButton();
 
-	/// Set the touch sound effect which will be played when the player touches any button.
+	/**
+	@brief Set the touch sound effect which will be played when the player touches any button.
+	*/
 	void setTouchSoundEffect();
 
 	/**

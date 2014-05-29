@@ -30,22 +30,34 @@ public:
 
 private:
 
-	/// Creates, places and animates the scene title.
+	/**
+	@brief  Creates, places and animates the scene title.
+	*/
 	void createGameTitle();
 
-	/// Creates the home button and places it on the screen.
+	/**
+	@brief Creates the home button and places it on the screen.
+	*/
 	void setHomeButton();
 
-	/// Creates and places the background for the Instructions Scene.
+	/**
+	@brief Creates and places the background for the Instructions Scene.
+	*/
 	void setBackground();
 
-	/// Set the touch sound effect which will be played when the player touches any button
+	/**
+	@brief  Set the touch sound effect which will be played when the player touches any button.
+	*/
 	void setTouchSoundEffect();
 
-	/// Creates and places the button that gets you to the Settings Scene
+	/**
+	@brief  Creates and places the button that gets you to the Settings Scene.
+	*/
 	void setSettingsButton();
 
-	/// Set the background music for the Instructions Scene
+	/**
+	@brief  Set the background music for the Instructions Scene.
+	*/
 	void setBackgroundMusic();
 };
 

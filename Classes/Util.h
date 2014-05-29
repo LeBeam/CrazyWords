@@ -7,7 +7,7 @@
 class Util
 {
 protected:
-	std::vector<Object*> animals;
+	std::vector<Object::Object*> animals;
 
 private:
 	bool loadAnimals();
