@@ -40,9 +40,14 @@ endif()
 
 
 set(GAME_SRC
-  proj.linux/main.cpp
-  Classes/AppDelegate.cpp
-  Classes/HelloWorldScene.cpp
+	proj.linux/main.cpp
+	Classes/AppDelegate.cpp
+	Classes/InstructionsScene.cpp
+	Classes/SettingsScene.cpp
+	Classes/Util.cpp
+	Classes/HelloWorldScene.cpp
+	Classes/GameObject.cpp
+	Classes/StartGameScene.cpp
 )
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
@@ -165,7 +170,7 @@ target_link_libraries(${APP_NAME}
 set(APP_BIN_DIR "${CMAKE_BINARY_DIR}/bin")
 
 set_target_properties(${APP_NAME} PROPERTIES
-     RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
+	 RUNTIME_OUTPUT_DIRECTORY  "${APP_BIN_DIR}")
 
 pre_build(${APP_NAME}
   COMMAND ${CMAKE_COMMAND} -E remove_directory ${APP_BIN_DIR}/Resources

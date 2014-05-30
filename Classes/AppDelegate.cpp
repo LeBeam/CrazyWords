@@ -7,11 +7,13 @@ AppDelegate::AppDelegate() {
 
 }
 
-AppDelegate::~AppDelegate() 
+AppDelegate::~AppDelegate()
 {
 }
 
-bool AppDelegate::applicationDidFinishLaunching() 
+#include "Util.h"
+
+bool AppDelegate::applicationDidFinishLaunching()
 {
 	// initialize director
 	auto director = Director::getInstance();
@@ -41,6 +43,13 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 	// run
 	director->runWithScene(scene);
+
+	srand( time(nullptr) );
+
+	Util util;
+	util.loadAnimals();
+	for ( size_t i = 0; i < 10; ++i )
+		log ( "Random animal = %s\n", util.getRandomAnimalName().c_str() );
 
 	return true;
 }

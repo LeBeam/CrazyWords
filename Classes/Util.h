@@ -2,18 +2,20 @@
 #define Util_h
 
 #include <vector>
-#include "Object.h"
+#include "GameObject.h"
 
 class Util
 {
 protected:
-	std::vector<Object::Object*> animals;
+	std::vector<GameObject*> animals;
 
 private:
-	bool loadAnimals();
+
+public:	bool loadAnimals();
 
 public:
-	std::string getAnimals();
+	std::string getRandomAnimalName();
+	~Util();
 };
 
 #endif
