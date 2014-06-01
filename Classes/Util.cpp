@@ -35,6 +35,7 @@ bool Util::loadAnimals()
 
 std::string Util::getRandomAnimalName()
 {
+	loadAnimals();
 	size_t azar = rand() % animals.size();
 	return animals[azar]->getText();
 }

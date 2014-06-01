@@ -1,3 +1,4 @@
+#include <cocos2d.h>
 #include "StartGameScene.h"
 #include <SimpleAudioEngine.h>
 #include "Util.h"
@@ -78,7 +79,7 @@ void StartGameScene::showAnimals()
 	{
 		for(int j = 1; j <= 4; j++)
 		{
-			setChosenAnimal("dog", i, j);
+			setChosenAnimal(i, j);
 			setEventHandlers();
 		}
 
@@ -86,24 +87,34 @@ void StartGameScene::showAnimals()
 
 }
 
-void StartGameScene::setChosenAnimal(std::string chosenAnimal, int i, int j)
+std::string StartGameScene::setSelectedAnimal()
 {
-	std::string cAnimal = chosenAnimal;
-	int ii = i;
-	int jj = j;
+	Util* animal = new Util();
+	std::string& cAnimal = animal->getRandomAnimalName();
+	return cAnimal;
+	animal->~Util();
+}
+
+void StartGameScene::setChosenAnimal(int i, int j)
+{
+	std::string cAnimal = setSelectedAnimal();
+	int hPosition = i;
+	int vPosition = j;
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto animalSprite = Sprite::create("objects/"+cAnimal+".png");
-	animalSprite->setPosition(Point(origin.x + (ii *175), origin.y + (jj *130) + 110));
+	const std::string& animalLocation = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+cAnimal+".png");
+
+	auto animalSprite = Sprite::create(animalLocation);
+	animalSprite->setPosition(Point(origin.x + (hPosition *175), origin.y + (vPosition *130) + 110));
 	this->addChild(animalSprite, 3);
 }
 
 void StartGameScene::placeAnimalPronunciation()
 {
-	//std::string cAnimal = chosenAnimal;
-	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/dog.mp3"); 
+	std::string cAnimal = setSelectedAnimal();
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+cAnimal+".mp3").c_str()); 
 }
 
 void StartGameScene::setEventHandlers()

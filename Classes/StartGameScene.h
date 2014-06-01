@@ -58,12 +58,17 @@ private:
 	@param i  The position related to the x axis
 	@param j  The position related to the y axis
 	*/
-	void setChosenAnimal(std::string chosenAnimal, int i, int j);
+	void setChosenAnimal(int i, int j);
 
 	/**
-	@brief  This methods is in charge of setting every animal sprite on the screen with the touch effect sound
+	@brief  This methods is in charge of setting every animal sprite on the screen with the touch effect sound.
 	*/
 	void showAnimals();
+
+	/**
+	@brief  This method is in charge of setting the name of the animal that is going to be used in other methods.
+	*/
+	std::string setSelectedAnimal();
 
 protected:
 	/**
