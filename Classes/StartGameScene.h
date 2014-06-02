@@ -4,11 +4,12 @@
 #include "cocos2d.h"
 #include <ctime>
 #include <cstdlib>
+#include <CCSprite.h>
 
 class StartGameScene : public cocos2d::Layer
 {
 public:
-	cocos2d::Sprite *animalSprite;
+	cocos2d::Sprite* animalSprite;
 
 	static cocos2d::Scene* createScene();
 
@@ -68,7 +69,9 @@ private:
 	/**
 	@brief  This method is in charge of setting the name of the animal that is going to be used in other methods.
 	*/
-	std::string setSelectedAnimal();
+
+	std::string cAnimal;
+
 
 protected:
 	/**
@@ -79,7 +82,7 @@ protected:
 	/**
 	@brief  Sets the related sound of the sprite
 	*/
-	void placeAnimalPronunciation();
+	void setAnimalPronunciation();
 };
 
 #endif // StartGameScene

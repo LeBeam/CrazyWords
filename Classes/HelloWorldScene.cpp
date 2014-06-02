@@ -91,7 +91,7 @@ void HelloWorld::createGameMenu()
 	setPlayButton();
 	setSettingsButton();
 	setInstructionsButton();
-	if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+	if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX))
 		setExitButton();
 }
 
