@@ -143,15 +143,7 @@ void SettingsScene::setSoundEffectsLabel()
 
 void SettingsScene::setSoundEffectsButton()
 {
-	Size visibleSize = Director::getInstance()->getVisibleSize();
-	Point origin = Director::getInstance()->getVisibleOrigin();
-
-	/// Boton de sonido, permite la activacion o desactivacion de los efectos de sonido del juego
-	auto buttonSound = MenuItemImage::create("Settings_menu/onoffsounds_button0.png", "Settings_menu/onoffsounds_button1.png", CC_CALLBACK_1(SettingsScene::turnOnOffSound, this));
-	buttonSound->setPosition(Point(origin.x + visibleSize.width / 2.0f * 1.3, origin.y + visibleSize.height / 2 * 0.7));
-	auto buttonSoundMenu = Menu::create(buttonSound, NULL);
-	buttonSoundMenu->setPosition(Point::ZERO);
-	this->addChild(buttonSoundMenu, 2);
+	
 }
 
 #include "HelloWorldScene.h"

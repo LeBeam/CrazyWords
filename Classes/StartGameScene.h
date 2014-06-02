@@ -70,7 +70,9 @@ private:
 	@brief  This method is in charge of setting the name of the animal that is going to be used in other methods.
 	*/
 
-	std::string cAnimal;
+	std::string setSelectedAnimal();
+
+	std::string pAnimal;
 
 
 protected:

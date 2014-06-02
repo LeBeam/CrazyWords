@@ -30,6 +30,7 @@ bool StartGameScene::init()
 	setSettingsButton();
 	setHomeButton();
 	showAnimals();
+	
 
 	return true;
 }
@@ -80,34 +81,47 @@ void StartGameScene::showAnimals()
 		for(int j = 1; j <= 4; j++)
 		{
 			setChosenAnimal(i, j);
+			
+			
 		}
 	}
+	
+	
+		
+}
+
+std::string StartGameScene::setSelectedAnimal()
+{
+	Util* animal = new Util();
+	std::string& cAnimal = animal->getRandomAnimalName();
+	return cAnimal;
+	animal->~Util();
+
 }
 
 void StartGameScene::setChosenAnimal(int i, int j)
 {
-	
-	Util* animal = new Util();
-	std::string& cAnimal = animal->getRandomAnimalName();
-	
+	pAnimal = setSelectedAnimal();
 	int hPosition = i;
 	int vPosition = j;
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	const std::string& animalLocation = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+cAnimal+".png");
+	const std::string& animalLocation = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+pAnimal+".png");
 
 	animalSprite = Sprite::create(animalLocation);
 	animalSprite->setPosition(Point(origin.x + (hPosition *175), origin.y + (vPosition *130) + 110));
 	this->addChild(animalSprite, 3);
 	setEventHandlers();
-	animal->~Util();
+	
+	
 }
 
 void StartGameScene::setAnimalPronunciation()
+
 {   
-	   CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+cAnimal+".mp3").c_str());
+	  CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+pAnimal+".mp3").c_str());
 }
 
 void StartGameScene::setEventHandlers()
