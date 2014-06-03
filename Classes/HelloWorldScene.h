@@ -1,7 +1,7 @@
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
-#include "cocos2d.h"
+#include <cocos2d.h>
 
 /**
 @brief    The cocos2d Application.

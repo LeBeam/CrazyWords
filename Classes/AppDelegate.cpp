@@ -11,8 +11,6 @@ AppDelegate::~AppDelegate()
 {
 }
 
-#include "Util.h"
-
 bool AppDelegate::applicationDidFinishLaunching()
 {
 	// initialize director
@@ -45,11 +43,6 @@ bool AppDelegate::applicationDidFinishLaunching()
 	director->runWithScene(scene);
 
 	srand( time(nullptr) );
-
-	Util util;
-	util.loadAnimals();
-	for ( size_t i = 0; i < 10; ++i )
-		log ( "Random animal = %s\n", util.getRandomAnimalName().c_str() );
 
 	return true;
 }

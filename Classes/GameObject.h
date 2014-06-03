@@ -3,16 +3,15 @@
 
 #include <fstream>
 #include <string>
+#include <cocos2d.h>
 
-class GameObject
+class GameObject : public cocos2d::Sprite
 {
-protected:
-	/**
-	@brief  This refers to each line in the file that is going to be loaded.
-	*/
-	std::string text;
 
 public:
+
+	static GameObject* create();
+
 	/**
 	@brief  This method receives a file that is going to be loaded and then it will take every line from the file
 			and save it in a variable.
@@ -24,7 +23,21 @@ public:
 	@brief  This method take the content of the variable that was declared for returning it later.
 	@return string The string that is contained in the object
 	*/
-	inline const std::string& getText() const { return text; }
+	inline const std::string& getName() const { return name; }
+
+	void setEventHandlers();
+
+	void playSound();
+
+	/**
+	@brief  This refers to each line in the file that is going to be loaded.
+	*/
+private:
+
+	std::string name;
+
+
+
 };
 
 #endif

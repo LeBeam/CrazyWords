@@ -1,7 +1,7 @@
 #include <cocos2d.h>
 #include "StartGameScene.h"
 #include <SimpleAudioEngine.h>
-#include "Util.h"
+#include "GameObjectManager.h"
 
 USING_NS_CC;
 
@@ -31,7 +31,6 @@ bool StartGameScene::init()
 	setHomeButton();
 	showAnimals();
 	
-
 	return true;
 }
 
@@ -76,52 +75,36 @@ void StartGameScene::setTouchSoundEffect()
 
 void StartGameScene::showAnimals()
 {
+	gameObjectManager.loadAnimals();
+	gameObjectManager.shuffle();
+
 	for(int i = 1; i <= 5; i++)
 	{
 		for(int j = 1; j <= 4; j++)
 		{
-			setChosenAnimal(i, j);
-			
-			
-		}
+			showRandomAnimalForCell(i, j);
+	    }
 	}
-	
-	
-		
+			
 }
 
-std::string StartGameScene::setSelectedAnimal()
+void StartGameScene::showRandomAnimalForCell(int row, int col)
 {
-	Util* animal = new Util();
-	std::string& cAnimal = animal->getRandomAnimalName();
-	return cAnimal;
-	animal->~Util();
-
-}
-
-void StartGameScene::setChosenAnimal(int i, int j)
-{
-	pAnimal = setSelectedAnimal();
-	int hPosition = i;
-	int vPosition = j;
-
+	
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	const std::string& animalLocation = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+pAnimal+".png");
-
-	animalSprite = Sprite::create(animalLocation);
-	animalSprite->setPosition(Point(origin.x + (hPosition *175), origin.y + (vPosition *130) + 110));
-	this->addChild(animalSprite, 3);
-	setEventHandlers();
-	
-	
+	GameObject* gameObject = gameObjectManager.getNextRandomObject();
+	gameObject->setPosition(Point(origin.x + (row *175), origin.y + (col *130) + 110));
+	this->addChild(gameObject, 3);
+	gameObject->setEventHandlers();
 }
 
-void StartGameScene::setAnimalPronunciation()
+
+void StartGameScene::playSound()
 
 {   
-	  CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+pAnimal+".mp3").c_str());
+	  //CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+pAnimal+".mp3").c_str());
 }
 
 void StartGameScene::setEventHandlers()
@@ -145,15 +128,14 @@ void StartGameScene::setEventHandlers()
 		//Check the click area
 		if (rect.containsPoint(locationInNode))
 		{
-			target->stopAllActions();
-			target->setAnimalPronunciation();
+			target->playSound();
 			return true;
 		}
 		return false;
 	};
 
 	//Add listener
-	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, animalSprite);
+	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 }
 
 #include "SettingsScene.h"

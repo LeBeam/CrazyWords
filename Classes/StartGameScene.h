@@ -5,12 +5,12 @@
 #include <ctime>
 #include <cstdlib>
 #include <CCSprite.h>
+#include "GameObjectManager.h"
 
 class StartGameScene : public cocos2d::Layer
 {
 public:
-	cocos2d::Sprite* animalSprite;
-
+	
 	static cocos2d::Scene* createScene();
 
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
@@ -59,7 +59,7 @@ private:
 	@param i  The position related to the x axis
 	@param j  The position related to the y axis
 	*/
-	void setChosenAnimal(int i, int j);
+	void showRandomAnimalForCell(int i, int j);
 
 	/**
 	@brief  This methods is in charge of setting every animal sprite on the screen with the touch effect sound.
@@ -71,9 +71,7 @@ private:
 	*/
 
 	std::string setSelectedAnimal();
-
-	std::string pAnimal;
-
+	
 
 protected:
 	/**
@@ -84,7 +82,12 @@ protected:
 	/**
 	@brief  Sets the related sound of the sprite
 	*/
-	void setAnimalPronunciation();
+	void playSound();
+
+protected:
+
+	GameObjectManager gameObjectManager;
+
 };
 
 #endif // StartGameScene

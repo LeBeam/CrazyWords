@@ -30,10 +30,10 @@
     <ClCompile Include="..\Classes\StartGameScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Util.cpp">
+    <ClCompile Include="..\Classes\GameObject.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\GameObject.cpp">
+    <ClCompile Include="..\Classes\GameObjectManager.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -56,10 +56,10 @@
     <ClInclude Include="..\Classes\StartGameScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Util.h">
+    <ClInclude Include="..\Classes\GameObject.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\GameObject.h">
+    <ClInclude Include="..\Classes\GameObjectManager.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
