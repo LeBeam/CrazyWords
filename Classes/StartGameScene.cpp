@@ -30,6 +30,8 @@ bool StartGameScene::init()
 	setSettingsButton();
 	setHomeButton();
 	showAnimals();
+	showHost();
+	setInstruction();
 	
 	return true;
 }
@@ -53,7 +55,7 @@ void StartGameScene::setSettingsButton()
 	settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
 	auto settingsMenuButton = Menu::create(settingsButton, NULL);
 	settingsMenuButton->setPosition(Point::ZERO);
-	this->addChild(settingsMenuButton, 2);
+	this->addChild(settingsMenuButton, 4);
 }
 
 void StartGameScene::setHomeButton()
@@ -65,7 +67,7 @@ void StartGameScene::setHomeButton()
 	homeButton->setPosition(Point(origin.x + homeButton->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - homeButton->getContentSize().height / 2.0f - 5.0f));
 	auto homeMenuButton = Menu::create(homeButton, NULL);
 	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 2);
+	this->addChild(homeMenuButton, 4);
 }
 
 void StartGameScene::setTouchSoundEffect()
@@ -96,11 +98,35 @@ void StartGameScene::showRandomAnimalForCell(int row, int col)
 
 	GameObject* gameObject = gameObjectManager.getNextRandomObject();
 	gameObject->setPosition(Point(origin.x + (row *175), origin.y + (col *130) + 110));
-	this->addChild(gameObject, 3);
+	this->addChild(gameObject, 2);
 	gameObject->setEventHandlers();
 }
 
+void StartGameScene::showHost()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
 
+	auto sprite = Sprite::create("other_images/host.png");
+	sprite->setPosition(Point(origin.x + 100, origin.y + 100));
+	sprite->setScale(0.5f);
+	this->addChild(sprite, 3);
+}
+
+void StartGameScene::setInstruction()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	const std::string& instruction = "Touch the cow!";
+
+	LabelTTF* label = LabelTTF::create(instruction, "Arial", 60, CCSizeMake(1000, 100), kCCTextAlignmentCenter);
+	label->setColor(ccc3(51,255,255));
+	label->setPosition(Point(origin.x + 400, origin.y + 70));
+	this->addChild(label, 3);
+}
+
+/*
 void StartGameScene::playSound()
 
 {   
@@ -136,7 +162,7 @@ void StartGameScene::setEventHandlers()
 
 	//Add listener
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-}
+}*/
 
 #include "SettingsScene.h"
 void StartGameScene::showSettings(Ref* pSender)

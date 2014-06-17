@@ -72,6 +72,9 @@ private:
 
 	std::string setSelectedAnimal();
 	
+	void showHost();
+
+	void setInstruction();
 
 protected:
 	/**

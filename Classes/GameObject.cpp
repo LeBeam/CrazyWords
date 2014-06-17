@@ -48,3 +48,5 @@ void GameObject::playSound()
 	  CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+name+".mp3").c_str());
 }
 
+
+
