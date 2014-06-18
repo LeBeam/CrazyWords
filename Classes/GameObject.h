@@ -35,6 +35,9 @@ public:
 private:
 
 	std::string name;
+public:
+
+	std::string touchObject;
 };
 
 #endif

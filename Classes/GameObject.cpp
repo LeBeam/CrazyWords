@@ -34,9 +34,20 @@ void GameObject::setEventHandlers()
 	{
 		// event->getCurrentTarget() returns the *listener's* sceneGraphPriority node.
 		auto target = static_cast<GameObject*>(event->getCurrentTarget());
-		target->playSound();
 
-		return true;
+		//Get the position of the current point relative to the button
+		Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+		Size s = target->getContentSize();
+		Rect rect = Rect(0, 0, s.width, s.height);
+
+		//Check the click area
+		if (rect.containsPoint(locationInNode))
+		{
+			target->playSound();
+			return true;
+		}
+		return false;
+
 	};
 
 	//Add listener
@@ -47,6 +58,8 @@ void GameObject::playSound()
 {   
 	  CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+name+".mp3").c_str());
 }
+
+
 
 
 

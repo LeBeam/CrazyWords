@@ -107,10 +107,12 @@ void StartGameScene::showHost()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto sprite = Sprite::create("other_images/host.png");
-	sprite->setPosition(Point(origin.x + 100, origin.y + 100));
-	sprite->setScale(0.5f);
-	this->addChild(sprite, 3);
+	auto gameObject = GameObject::create();
+	gameObject->setPosition(Point(origin.x + 100, origin.y + 100));
+	gameObject->setScale(0.5f);
+	this->addChild(gameObject, 3);
+	gameObject->setTexture("other_images/host.png");
+	
 }
 
 void StartGameScene::setInstruction()
@@ -118,7 +120,12 @@ void StartGameScene::setInstruction()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-	const std::string& instruction = "Touch the cow!";
+
+	GameObject* animalObject = gameObjectManager.getRandomObject();
+    std::string animalName = animalObject->getName();
+
+    const std::string& instruction = "Touch the " + animalName + "!";
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
 
 	LabelTTF* label = LabelTTF::create(instruction, "Arial", 60, CCSizeMake(1000, 100), kCCTextAlignmentCenter);
 	label->setColor(ccc3(51,255,255));
