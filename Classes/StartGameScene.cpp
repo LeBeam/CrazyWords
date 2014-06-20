@@ -31,7 +31,7 @@ bool StartGameScene::init()
 	setHomeButton();
 	showAnimals();
 	showHost();
-	setInstruction();
+	setInstructionLabel();
 	
 	return true;
 }
@@ -115,12 +115,11 @@ void StartGameScene::showHost()
 	
 }
 
-void StartGameScene::setInstruction()
+void StartGameScene::setInstructionLabel()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-
 	GameObject* animalObject = gameObjectManager.getRandomObject();
     std::string animalName = animalObject->getName();
 

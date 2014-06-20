@@ -74,7 +74,7 @@ private:
 	
 	void showHost();
 
-	void setInstruction();
+	void setInstructionLabel();
 
 protected:
 	/**
