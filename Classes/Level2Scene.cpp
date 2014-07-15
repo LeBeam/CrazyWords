@@ -15,6 +15,20 @@ Scene* Level2Scene::createScene()
 	return scene;
 }
 
+bool Level2Scene::init()
+{
+	if ( !Layer::init() )
+		return false;
+
+	setBackground();
+	setSettingsButton();
+	setHomeButton();
+	showHost();
+	setInstructionLabel();
+	
+	return true;
+}
+
 void Level2Scene::setBackground()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -68,4 +82,34 @@ void Level2Scene::returnGameMenu(Ref* pSender)
 	auto newScene = HelloWorld::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
 
+}
+
+void Level2Scene::showHost()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto gameObject = GameObject::create();
+	gameObject->setPosition(Point(origin.x + 100, origin.y + 600));
+	gameObject->setScale(0.5f);
+	this->addChild(gameObject, 3);
+	gameObject->setTexture("other_images/host.png");
+	
+}
+
+void Level2Scene::setInstructionLabel()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	//GameObject* animalObject = gameObjectManager.getRandomObject();
+    //std::string animalName = animalObject->getName();
+
+    const std::string& instruction = "Touch the red color\n to paint the apple !";
+	
+	LabelTTF* label = LabelTTF::create(instruction, "Arial", 60, CCSizeMake(1000, 100), kCCTextAlignmentCenter);
+	label->setColor(ccc3(51,255,255));
+	label->setPosition(Point(origin.x + 100, origin.y + 550));
+	this->addChild(label, 3);
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
 }

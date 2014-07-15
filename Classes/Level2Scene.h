@@ -13,6 +13,9 @@ public:
 
 	static cocos2d::Scene* createScene();
 
+	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+	virtual bool init();
+
 	/**
 	@brief Creates the whole Settings Scene and the transition to this scene.
 	@param pSender  the reference to the Settings Scene
@@ -24,6 +27,9 @@ public:
 	@param pSender  the reference to the "Return" button
 	*/
 	void returnGameMenu(cocos2d::Ref* pSender);
+
+	// implement the "static create()" method manually
+	CREATE_FUNC(Level2Scene);
 
 private:
 	/**
@@ -45,6 +51,15 @@ private:
 	@brief Set the touch sound effect which will be played when the player touches any button.
 	*/
 	void setTouchSoundEffect();
+
+	void showHost();
+
+	void setInstructionLabel();
+
+
+protected:
+
+	GameObjectManager gameObjectManager;
 };
 
 #endif // Level2Scene

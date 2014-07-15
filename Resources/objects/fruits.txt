@@ -1,14 +1,7 @@
 banana
-bananaBW
-grapes
-grapesBW
+grape
 lemon
-lemonBW
 orange
-orangeBW
 pear
-pearBW
 strawberry
-strawberryBW
 watermelon
-watermelonBW

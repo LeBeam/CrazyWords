@@ -143,11 +143,11 @@ void HelloWorld::setExitButton()
 	this->addChild(exitMenuButton, 2);
 }
 
-#include "StartGameScene.h"
+#include "Level2Scene.h"
 void HelloWorld::startGame(Ref* pSender)
 {
 	// Se crea la escena y la transicion para la pantalla de iniciar el juego
-	auto newScene = StartGameScene::createScene();
+	auto newScene = Level2Scene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFadeBL::create(0.75f, newScene));
 }
 
