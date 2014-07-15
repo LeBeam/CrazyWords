@@ -52,11 +52,3 @@ GameObject* GameObjectManager::getNextRandomObject()
 	return objects[nextObjectIndex++];
 }
 
-
-
-
-
-
-
-
-
