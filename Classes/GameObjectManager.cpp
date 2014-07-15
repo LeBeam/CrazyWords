@@ -1,5 +1,6 @@
 #include "GameObjectManager.h"
 #include "GameObject.h"
+#include "String.h"
 
 #include <cstdlib>
 #include <cocos2d.h>
@@ -14,9 +15,9 @@ GameObjectManager::~GameObjectManager()
 		 objects[i]->release();
 }
 
-bool GameObjectManager::loadAnimals()
+bool GameObjectManager::loadObjects(std::string nameFile)
 {
-	const std::string& filename = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/animals.txt");
+	const std::string& filename = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+nameFile+".txt");
 	std::ifstream file( filename.c_str() );
 
 	while ( true )

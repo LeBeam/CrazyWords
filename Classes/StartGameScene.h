@@ -76,6 +76,8 @@ private:
 
 	void setInstructionLabel();
 
+	void setPlayingMusic();
+
 protected:
 	/**
 	@brief  This method is in charge of setting the action that will be played once you touch any sprite

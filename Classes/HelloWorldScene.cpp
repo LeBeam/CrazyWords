@@ -148,7 +148,7 @@ void HelloWorld::startGame(Ref* pSender)
 {
 	// Se crea la escena y la transicion para la pantalla de iniciar el juego
 	auto newScene = StartGameScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->replaceScene(CCTransitionFadeBL::create(0.75f, newScene));
 }
 
 

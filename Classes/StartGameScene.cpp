@@ -26,6 +26,7 @@ bool StartGameScene::init()
 	if ( !Layer::init() )
 		return false;
 
+	setPlayingMusic();
 	setBackground();
 	setSettingsButton();
 	setHomeButton();
@@ -75,9 +76,18 @@ void StartGameScene::setTouchSoundEffect()
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
 
+void StartGameScene::setPlayingMusic()
+{
+	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
+	sound->setBackgroundMusicVolume(0.5f);
+	sound->playBackgroundMusic("Music/game_general_music.mp3", true);
+
+}
+
 void StartGameScene::showAnimals()
 {
-	gameObjectManager.loadAnimals();
+	gameObjectManager.loadObjects("animals");
 	gameObjectManager.shuffle();
 
 	for(int i = 1; i <= 5; i++)
@@ -124,12 +134,12 @@ void StartGameScene::setInstructionLabel()
     std::string animalName = animalObject->getName();
 
     const std::string& instruction = "Touch the " + animalName + "!";
-	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
-
+	
 	LabelTTF* label = LabelTTF::create(instruction, "Arial", 60, CCSizeMake(1000, 100), kCCTextAlignmentCenter);
 	label->setColor(ccc3(51,255,255));
 	label->setPosition(Point(origin.x + 400, origin.y + 70));
 	this->addChild(label, 3);
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
 }
 
 /*

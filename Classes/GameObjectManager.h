@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "GameObject.h"
+#include "String.h"
 
 class GameObjectManager
 {
@@ -11,7 +12,8 @@ protected:
 
 	size_t nextObjectIndex;
 
-    public:	bool loadAnimals();
+ public:	
+	bool loadObjects(std::string nameFile);
 
 public:
 	GameObject* getNextRandomObject();
