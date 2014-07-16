@@ -56,6 +56,8 @@ private:
 
 	void setInstructionLabel();
 
+	void showFruits();
+
 
 protected:
 

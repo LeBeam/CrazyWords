@@ -15,9 +15,9 @@ GameObjectManager::~GameObjectManager()
 		 objects[i]->release();
 }
 
-bool GameObjectManager::loadObjects(std::string nameFile)
+bool GameObjectManager::loadObjects()
 {
-	const std::string& filename = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/"+nameFile+".txt");
+	const std::string& filename = cocos2d::FileUtils::getInstance()->fullPathForFilename("objects/objects.txt");
 	std::ifstream file( filename.c_str() );
 
 	while ( true )
@@ -36,19 +36,33 @@ bool GameObjectManager::loadObjects(std::string nameFile)
 	return true;
 }
 
-GameObject* GameObjectManager::getRandomObject()
+GameObject* GameObjectManager::getRandomObject(int position)
 {
-	size_t azar = rand() % objects.size();
+	size_t azar = rand() % position;
 	return objects[azar];
-}
-
-void GameObjectManager::shuffle()
-{ 
-   std::random_shuffle(objects.begin(), objects.end());
 }
 
 GameObject* GameObjectManager::getNextRandomObject()
 {
 	return objects[nextObjectIndex++];
 }
+
+GameObject* GameObjectManager::getObject(int position)
+{
+	return objects[position];
+}
+
+void GameObjectManager::shuffleAnimals()
+{ 
+	 std::random_shuffle(objects.begin(), (objects.begin()+21));
+}
+
+void GameObjectManager::shuffleFruits()
+{ 
+	std::random_shuffle((objects.begin()+22), objects.end());
+}
+
+
+
+
 

@@ -13,16 +13,20 @@ protected:
 	size_t nextObjectIndex;
 
  public:	
-	bool loadObjects(std::string nameFile);
+	bool loadObjects();
 
 public:
 	GameObject* getNextRandomObject();
 
-	GameObject* getRandomObject();
+	GameObject* getRandomObject(int position);
+
+	GameObject* getObject(int position);
 
 	~GameObjectManager();
 
-	void shuffle();
+	void shuffleAnimals();
+
+	void shuffleFruits();
 };
 
 #endif

@@ -25,6 +25,7 @@ bool Level2Scene::init()
 	setSettingsButton();
 	setHomeButton();
 	showHost();
+	showFruits();
 	setInstructionLabel();
 	
 	return true;
@@ -74,7 +75,7 @@ void Level2Scene::showHost()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	 auto gameObject = GameObject::create();
+	auto gameObject = GameObject::create();
 	gameObject->setPosition(Point(origin.x + 250, origin.y + 600));
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 3);
@@ -87,10 +88,10 @@ void Level2Scene::setInstructionLabel()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-	//GameObject* animalObject = gameObjectManager.getRandomObject();
-    //std::string animalName = animalObject->getName();
+	GameObject* fruitObject = gameObjectManager.getObject(25);
+    std::string fruitName = fruitObject->getName();
 
-    const std::string& instruction = "Touch the red color\n to paint the apple !";
+    const std::string& instruction = "Touch the red color\n to paint the " + fruitName + "!";
 	
 	LabelTTF* label = LabelTTF::create(instruction, "Arial", 45, CCSizeMake(700, 200), kCCTextAlignmentCenter);
 	label->setColor(ccc3(0,25,50));
@@ -98,6 +99,22 @@ void Level2Scene::setInstructionLabel()
 	this->addChild(label, 3);
 	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
 }
+
+void Level2Scene::showFruits()
+{
+	gameObjectManager.loadObjects();
+	gameObjectManager.shuffleFruits();
+
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	GameObject* gameObject = gameObjectManager.getObject(25);
+	gameObject->setPosition(Point(origin.x + 740, origin.y + 384));
+	gameObject->setScale(0.5f);
+	this->addChild(gameObject, 2);
+	gameObject->setEventHandlers();
+}
+
 
 #include "SettingsScene.h"
 void Level2Scene::showSettings(Ref* pSender)

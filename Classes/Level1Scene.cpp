@@ -87,8 +87,8 @@ void Level1Scene::setPlayingMusic()
 
 void Level1Scene::showAnimals()
 {
-	gameObjectManager.loadObjects("animals");
-	gameObjectManager.shuffle();
+	gameObjectManager.loadObjects();
+	gameObjectManager.shuffleAnimals();
 
 	for(int i = 1; i <= 5; i++)
 	{
@@ -130,7 +130,7 @@ void Level1Scene::setInstructionLabel()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-	GameObject* animalObject = gameObjectManager.getRandomObject();
+	GameObject* animalObject = gameObjectManager.getRandomObject(19);
     std::string animalName = animalObject->getName();
 
     const std::string& instruction = "Touch the " + animalName + "!";

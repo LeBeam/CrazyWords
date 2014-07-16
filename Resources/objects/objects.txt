@@ -20,3 +20,10 @@ pig
 sheep
 squirrel
 zebra
+banana
+grape
+lemon
+orange
+pear
+strawberry
+watermelon
