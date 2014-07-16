@@ -58,10 +58,16 @@ private:
 
 	void showFruits();
 
+	void setFruitColor();
+
+	void setRedColorButton();
+
 
 protected:
 
 	GameObjectManager gameObjectManager;
+
+	std::string fruitColor;
 };
 
 #endif // Level2Scene

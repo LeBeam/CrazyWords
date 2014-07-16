@@ -91,7 +91,8 @@ void Level2Scene::setInstructionLabel()
 	GameObject* fruitObject = gameObjectManager.getObject(25);
     std::string fruitName = fruitObject->getName();
 
-    const std::string& instruction = "Touch the red color\n to paint the " + fruitName + "!";
+	setFruitColor();
+    const std::string& instruction = "Touch the "+ fruitColor +"\n to paint the " + fruitName + "!";
 	
 	LabelTTF* label = LabelTTF::create(instruction, "Arial", 45, CCSizeMake(700, 200), kCCTextAlignmentCenter);
 	label->setColor(ccc3(0,25,50));
@@ -114,6 +115,29 @@ void Level2Scene::showFruits()
 	this->addChild(gameObject, 2);
 	gameObject->setEventHandlers();
 }
+
+void Level2Scene::setFruitColor()
+{
+	 GameObject* gameObject = gameObjectManager.getObject(25);
+     std::string fruit = gameObject->getName();
+
+	if( fruit == "banana")
+		fruitColor = "blue color";
+	if( fruit == "grape" )
+		fruitColor = "orange color";
+    if( fruit == "lemon" )
+		fruitColor = "blue color";
+    if( fruit == "orange")	
+		fruitColor = "purple color";
+    if( fruit == "pear")
+        fruitColor = "red color";
+    if( fruit == "strawberry")
+        fruitColor = "yellow";
+    if( fruit == "watermelon")
+        fruitColor = "yellow";
+}
+
+
 
 
 #include "SettingsScene.h"
