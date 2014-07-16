@@ -116,11 +116,11 @@ void InstructionsScene::showSettings(Ref* pSender)
 }
 
 
-#include "HelloWorldScene.h"
+#include "MenuScene.h"
 void InstructionsScene::returnGameMenu(Ref* pSender)
 {
 	InstructionsScene::setTouchSoundEffect();
-	auto newScene = HelloWorld::createScene();
+	auto newScene = MenuScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
 }
 

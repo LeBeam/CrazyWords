@@ -21,6 +21,7 @@ bool Level2Scene::init()
 		return false;
 
 	setBackground();
+	setTouchSoundEffect();
 	setSettingsButton();
 	setHomeButton();
 	showHost();
@@ -68,29 +69,13 @@ void Level2Scene::setTouchSoundEffect()
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
 
-#include "SettingsScene.h"
-void Level2Scene::showSettings(Ref* pSender)
-{
-	auto newScene = SettingsScene::createScene();
-	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
-}
-
-#include "HelloWorldScene.h"
-void Level2Scene::returnGameMenu(Ref* pSender)
-{
-	Level2Scene::setTouchSoundEffect();
-	auto newScene = HelloWorld::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
-
-}
-
 void Level2Scene::showHost()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto gameObject = GameObject::create();
-	gameObject->setPosition(Point(origin.x + 100, origin.y + 600));
+	 auto gameObject = GameObject::create();
+	gameObject->setPosition(Point(origin.x + 250, origin.y + 600));
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 3);
 	gameObject->setTexture("other_images/host.png");
@@ -107,9 +92,25 @@ void Level2Scene::setInstructionLabel()
 
     const std::string& instruction = "Touch the red color\n to paint the apple !";
 	
-	LabelTTF* label = LabelTTF::create(instruction, "Arial", 60, CCSizeMake(1000, 100), kCCTextAlignmentCenter);
-	label->setColor(ccc3(51,255,255));
-	label->setPosition(Point(origin.x + 100, origin.y + 550));
+	LabelTTF* label = LabelTTF::create(instruction, "Arial", 45, CCSizeMake(700, 200), kCCTextAlignmentCenter);
+	label->setColor(ccc3(0,25,50));
+	label->setPosition(Point(origin.x + 250, origin.y + 400));
 	this->addChild(label, 3);
 	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
+}
+
+#include "SettingsScene.h"
+void Level2Scene::showSettings(Ref* pSender)
+{
+	auto newScene = SettingsScene::createScene();
+	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
+}
+
+#include "MenuScene.h"
+void Level2Scene::returnGameMenu(Ref* pSender)
+{
+	Level2Scene::setTouchSoundEffect();
+	auto newScene = MenuScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
+
 }

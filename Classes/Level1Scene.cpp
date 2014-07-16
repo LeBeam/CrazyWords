@@ -1,17 +1,17 @@
 #include <cocos2d.h>
-#include "StartGameScene.h"
+#include "Level1Scene.h"
 #include <SimpleAudioEngine.h>
 #include "GameObjectManager.h"
 
 USING_NS_CC;
 
-Scene* StartGameScene::createScene()
+Scene* Level1Scene::createScene()
 {
 	// 'scene' is an autorelease object
 	auto scene = Scene::create();
 
 	// 'layer' is an autorelease object
-	auto layer = StartGameScene::create();
+	auto layer = Level1Scene::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -21,7 +21,7 @@ Scene* StartGameScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool StartGameScene::init()
+bool Level1Scene::init()
 {
 	if ( !Layer::init() )
 		return false;
@@ -37,7 +37,7 @@ bool StartGameScene::init()
 	return true;
 }
 
-void StartGameScene::setBackground()
+void Level1Scene::setBackground()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -47,36 +47,36 @@ void StartGameScene::setBackground()
 	this->addChild(sprite, 0);
 }
 
-void StartGameScene::setSettingsButton()
+void Level1Scene::setSettingsButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(StartGameScene::showSettings, this));
+	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(Level1Scene::showSettings, this));
 	settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
 	auto settingsMenuButton = Menu::create(settingsButton, NULL);
 	settingsMenuButton->setPosition(Point::ZERO);
 	this->addChild(settingsMenuButton, 4);
 }
 
-void StartGameScene::setHomeButton()
+void Level1Scene::setHomeButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto homeButton = MenuItemImage::create("game_scenes/home_button.png", "game_scenes/home_button.png", CC_CALLBACK_1(StartGameScene::returnGameMenu, this));
+	auto homeButton = MenuItemImage::create("game_scenes/home_button.png", "game_scenes/home_button.png", CC_CALLBACK_1(Level1Scene::returnGameMenu, this));
 	homeButton->setPosition(Point(origin.x + homeButton->getContentSize().width / 2.0f + 5.0f, origin.y + visibleSize.height - homeButton->getContentSize().height / 2.0f - 5.0f));
 	auto homeMenuButton = Menu::create(homeButton, NULL);
 	homeMenuButton->setPosition(Point::ZERO);
 	this->addChild(homeMenuButton, 4);
 }
 
-void StartGameScene::setTouchSoundEffect()
+void Level1Scene::setTouchSoundEffect()
 {
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Music/mouse_click.mp3"); 
 }
 
-void StartGameScene::setPlayingMusic()
+void Level1Scene::setPlayingMusic()
 {
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
@@ -85,7 +85,7 @@ void StartGameScene::setPlayingMusic()
 
 }
 
-void StartGameScene::showAnimals()
+void Level1Scene::showAnimals()
 {
 	gameObjectManager.loadObjects("animals");
 	gameObjectManager.shuffle();
@@ -100,7 +100,7 @@ void StartGameScene::showAnimals()
 			
 }
 
-void StartGameScene::showRandomAnimalForCell(int row, int col)
+void Level1Scene::showRandomAnimalForCell(int row, int col)
 {
 	
 	Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -112,7 +112,7 @@ void StartGameScene::showRandomAnimalForCell(int row, int col)
 	gameObject->setEventHandlers();
 }
 
-void StartGameScene::showHost()
+void Level1Scene::showHost()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -125,7 +125,7 @@ void StartGameScene::showHost()
 	
 }
 
-void StartGameScene::setInstructionLabel()
+void Level1Scene::setInstructionLabel()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -143,13 +143,13 @@ void StartGameScene::setInstructionLabel()
 }
 
 /*
-void StartGameScene::playSound()
+void Level1Scene::playSound()
 
 {   
 	  //CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+pAnimal+".mp3").c_str());
 }
 
-void StartGameScene::setEventHandlers()
+void Level1Scene::setEventHandlers()
 {
 	//Create a "one by one" touch event listener (processes one touch at a time)
 	auto listener = EventListenerTouchOneByOne::create();
@@ -181,17 +181,17 @@ void StartGameScene::setEventHandlers()
 }*/
 
 #include "SettingsScene.h"
-void StartGameScene::showSettings(Ref* pSender)
+void Level1Scene::showSettings(Ref* pSender)
 {
 	auto newScene = SettingsScene::createScene();
 	Director::getInstance()->pushScene(CCTransitionFade::create(0.75f, newScene));
 }
 
-#include "HelloWorldScene.h"
-void StartGameScene::returnGameMenu(Ref* pSender)
+#include "MenuScene.h"
+void Level1Scene::returnGameMenu(Ref* pSender)
 {
-	StartGameScene::setTouchSoundEffect();
-	auto newScene = HelloWorld::createScene();
+	Level1Scene::setTouchSoundEffect();
+	auto newScene = MenuScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
 
 }

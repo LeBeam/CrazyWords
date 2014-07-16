@@ -7,7 +7,7 @@
 #include <CCSprite.h>
 #include "GameObjectManager.h"
 
-class StartGameScene : public cocos2d::Layer
+class Level1Scene : public cocos2d::Layer
 {
 public:
 	
@@ -29,7 +29,7 @@ public:
 	void returnGameMenu(cocos2d::Ref* pSender);
 
 	// implement the "static create()" method manually
-	CREATE_FUNC(StartGameScene);
+	CREATE_FUNC(Level1Scene);
 
 private: 
 

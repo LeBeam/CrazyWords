@@ -146,7 +146,7 @@ void SettingsScene::setSoundEffectsButton()
 	
 }
 
-#include "HelloWorldScene.h"
+#include "MenuScene.h"
 void SettingsScene::returnGameMenu(Ref* pSender)
 {
 	SettingsScene::setTouchSoundEffect();

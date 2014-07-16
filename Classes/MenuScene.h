@@ -1,5 +1,5 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef __MenuScene_SCENE_H__
+#define __MenuScene_SCENE_H__
 
 #include <cocos2d.h>
 
@@ -8,7 +8,7 @@
 
 The reason for implement as private inheritance is to hide some interface call by Director.
 */
-class HelloWorld : public cocos2d::Layer
+class MenuScene : public cocos2d::Layer
 {
 public:
 	/**
@@ -48,7 +48,7 @@ public:
 	/**
 	@brief  implement the "static create()" method manually
 	*/
-	CREATE_FUNC(HelloWorld);
+	CREATE_FUNC(MenuScene);
 
 private:
 	/**
@@ -97,4 +97,4 @@ private:
 	void setPlayButton();
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __MenuScene_SCENE_H__

@@ -1,15 +1,15 @@
-#include "HelloWorldScene.h"
+#include "MenuScene.h"
 #include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
+Scene* MenuScene::createScene()
 {
 	//'scene' is an autorelease object
 	auto scene = Scene::create();	/** \var  */
 
 	// 'layer' is an autorelease object
-	auto layer = HelloWorld::create();
+	auto layer = MenuScene::create();
 
 	// add layer as a child to scene
 	scene->addChild(layer);
@@ -19,7 +19,7 @@ Scene* HelloWorld::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool MenuScene::init()
 {
 	if ( !Layer::init() )
 		return false;
@@ -33,7 +33,7 @@ bool HelloWorld::init()
 	return true;
 }
 
-void HelloWorld::setPersonalLabel()
+void MenuScene::setPersonalLabel()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -43,7 +43,7 @@ void HelloWorld::setPersonalLabel()
 	this->addChild(label, 1);
 }
 
-void HelloWorld::setBackground()
+void MenuScene::setBackground()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -53,14 +53,14 @@ void HelloWorld::setBackground()
 	this->addChild(sprite, 0);
 }
 
-void HelloWorld::setMenuMusic()
+void MenuScene::setMenuMusic()
 {
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Music/mariachi_snooze.mp3", true);
 }
 
-void HelloWorld::createGameTitle()
+void MenuScene::createGameTitle()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -86,7 +86,7 @@ void HelloWorld::createGameTitle()
 
 }
 
-void HelloWorld::createGameMenu()
+void MenuScene::createGameMenu()
 {
 	setPlayButton();
 	setSettingsButton();
@@ -95,48 +95,48 @@ void HelloWorld::createGameMenu()
 		setExitButton();
 }
 
-void HelloWorld::setPlayButton()
+void MenuScene::setPlayButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto playButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(HelloWorld::startGame, this));
+	auto playButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(MenuScene::startGame, this));
 	playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
 	auto playMenuButton = Menu::create(playButton, NULL);
 	playMenuButton->setPosition(Point::ZERO);
 	this->addChild(playMenuButton, 2);
 }
 
-void HelloWorld::setSettingsButton()
+void MenuScene::setSettingsButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(HelloWorld::showSettings, this));
+	auto settingsButton = MenuItemImage::create("Menu/settings_button0.png","Menu/settings_button1.png",CC_CALLBACK_1(MenuScene::showSettings, this));
 	settingsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.9 ,origin.y+ visibleSize.height/2 * 1.85));
 	auto settingsMenuButton = Menu::create(settingsButton, NULL);
 	settingsMenuButton->setPosition(Point::ZERO);
 	this->addChild(settingsMenuButton, 2);
 }
 
-void HelloWorld::setInstructionsButton()
+void MenuScene::setInstructionsButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto instructionsButton = MenuItemImage::create("Menu/instructions_button0.png","Menu/instructions_button1.png",CC_CALLBACK_1(HelloWorld::showInstructions, this));
+	auto instructionsButton = MenuItemImage::create("Menu/instructions_button0.png","Menu/instructions_button1.png",CC_CALLBACK_1(MenuScene::showInstructions, this));
 	instructionsButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 0.7));
 	auto instructionsMenuButton = Menu::create(instructionsButton, NULL);
 	instructionsMenuButton->setPosition(Point::ZERO);
 	this->addChild(instructionsMenuButton, 2);
 }
 
-void HelloWorld::setExitButton()
+void MenuScene::setExitButton()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(HelloWorld::exit, this));
+	auto exitButton = MenuItemImage::create("Menu/exit_button1.png","Menu/exit_button2.png",CC_CALLBACK_1(MenuScene::exit, this));
 	exitButton->setPosition(Point(origin.x + visibleSize.width/2 * 0.6 ,origin.y+ visibleSize.height/2 * 0.7));
 	auto exitMenuButton = Menu::create(exitButton, NULL);
 	exitMenuButton->setPosition(Point::ZERO);
@@ -144,7 +144,7 @@ void HelloWorld::setExitButton()
 }
 
 #include "Level2Scene.h"
-void HelloWorld::startGame(Ref* pSender)
+void MenuScene::startGame(Ref* pSender)
 {
 	// Se crea la escena y la transicion para la pantalla de iniciar el juego
 	auto newScene = Level2Scene::createScene();
@@ -153,7 +153,7 @@ void HelloWorld::startGame(Ref* pSender)
 
 
 #include "InstructionsScene.h"
-void HelloWorld::showInstructions(Ref* pSender)
+void MenuScene::showInstructions(Ref* pSender)
 {
 	// Se crea la escena y la transicion para la pantalla de Instrucciones
 	auto newScene = InstructionsScene::createScene();
@@ -161,7 +161,7 @@ void HelloWorld::showInstructions(Ref* pSender)
 }
 
 #include "SettingsScene.h"
-void HelloWorld::showSettings(Ref* pSender)
+void MenuScene::showSettings(Ref* pSender)
 {
 	// Se crea la escena y la transicion para la pantalla de Configuraciones
 	auto newScene = SettingsScene::createScene();
@@ -169,7 +169,7 @@ void HelloWorld::showSettings(Ref* pSender)
 }
 
 
-void HelloWorld::exit(cocos2d::Ref* pSender)
+void MenuScene::exit(cocos2d::Ref* pSender)
 {
 	Director::getInstance()->end();
 }
