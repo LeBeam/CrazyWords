@@ -88,19 +88,32 @@ void MenuScene::createGameTitle()
 
 void MenuScene::createGameMenu()
 {
-	setPlayButton();
+	setPlayLevel1Button();
+	setPlayLevel2Button();
 	setSettingsButton();
 	setInstructionsButton();
 	if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) || (CC_TARGET_PLATFORM == CC_PLATFORM_LINUX))
 		setExitButton();
 }
 
-void MenuScene::setPlayButton()
+void MenuScene::setPlayLevel1Button()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto playButton = MenuItemImage::create("Menu/username_button.png","Menu/username_button.png",CC_CALLBACK_1(MenuScene::startGame, this));
+	auto playButton = MenuItemImage::create("Menu/level1scene1_button.png","Menu/level1scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel1, this));
+	playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.5));
+	auto playMenuButton = Menu::create(playButton, NULL);
+	playMenuButton->setPosition(Point::ZERO);
+	this->addChild(playMenuButton, 2);
+}
+
+void MenuScene::setPlayLevel2Button()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto playButton = MenuItemImage::create("Menu/level2scene1_button.png","Menu/level2scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel2, this));
 	playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
 	auto playMenuButton = Menu::create(playButton, NULL);
 	playMenuButton->setPosition(Point::ZERO);
@@ -143,10 +156,16 @@ void MenuScene::setExitButton()
 	this->addChild(exitMenuButton, 2);
 }
 
-#include "Level2Scene.h"
-void MenuScene::startGame(Ref* pSender)
+#include "Level1Scene.h"
+void MenuScene::startLevel1(Ref* pSender)
 {
-	// Se crea la escena y la transicion para la pantalla de iniciar el juego
+	auto newScene = Level1Scene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionFadeBL::create(0.75f, newScene));
+}
+
+#include "Level2Scene.h"
+void MenuScene::startLevel2(Ref* pSender)
+{
 	auto newScene = Level2Scene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionFadeBL::create(0.75f, newScene));
 }

@@ -450,8 +450,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="-196.73301"
-     inkscape:cy="311.33338"
+     inkscape:cx="88.17276"
+     inkscape:cy="229.21"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1281,9 +1281,9 @@
        y="884.06787"
        ry="56.303585"
        transform="matrix(0.79682313,0,0,0.56255847,-466.85462,264.62924)"
-       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame1_button.png"
-       inkscape:export-xdpi="83.54129"
-       inkscape:export-ydpi="83.54129" />
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\Resources\Menu\level2scene1_button.png"
+       inkscape:export-xdpi="81.510773"
+       inkscape:export-ydpi="81.510773" />
     <text
        xml:space="preserve"
        style="font-size:90px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Comica BD;-inkscape-font-specification:Comica BD"
@@ -1291,14 +1291,14 @@
        y="809.36212"
        id="text3198"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame1_button.png"
-       inkscape:export-xdpi="83.54129"
-       inkscape:export-ydpi="83.54129"><tspan
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\Resources\Menu\level2scene1_button.png"
+       inkscape:export-xdpi="81.510773"
+       inkscape:export-ydpi="81.510773"><tspan
          sodipodi:role="line"
          id="tspan3200"
          x="-247"
          y="809.36212"
-         style="font-size:48px">Continue</tspan></text>
+         style="font-size:48px">Level  2</tspan></text>
     <rect
        style="fill:#00aad4;filter:url(#filter7383-6-1)"
        id="rect3033-6-2-9"
@@ -1308,9 +1308,9 @@
        y="884.06787"
        ry="56.303585"
        transform="matrix(0.79682313,0,0,0.56255847,-465.85462,375.62924)"
-       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame2_button.png"
-       inkscape:export-xdpi="83.54129"
-       inkscape:export-ydpi="83.54129" />
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\Resources\Menu\level2scene2_button.png"
+       inkscape:export-xdpi="81.510773"
+       inkscape:export-ydpi="81.510773" />
     <text
        xml:space="preserve"
        style="font-size:90px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Comica BD;-inkscape-font-specification:Comica BD"
@@ -1318,13 +1318,23 @@
        y="921.33087"
        id="text3198-3"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\Jonathan\Desktop\PROGRA 2\CrazyWords\crazywords\Resources\Menu\continuegame2_button.png"
-       inkscape:export-xdpi="83.54129"
-       inkscape:export-ydpi="83.54129"><tspan
+       inkscape:export-filename="C:\Users\Jonathan\Desktop\CrazyWords\Resources\Menu\level2scene2_button.png"
+       inkscape:export-xdpi="81.510773"
+       inkscape:export-ydpi="81.510773"><tspan
          sodipodi:role="line"
          id="tspan3200-3"
          x="-254.66016"
          y="921.33087"
-         style="font-size:48px">Continuar</tspan></text>
-  </g>
+         style="font-size:48px">Nivel  2</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3178"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Comica BD;font-style:normal;font-weight:normal;font-size:90px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Comica BD;font-stretch:normal;font-variant:normal"><flowRegion
+         id="flowRegion3180"><rect
+           id="rect3182"
+           width="305"
+           height="150"
+           x="-325"
+           y="-77" /></flowRegion><flowPara
+         id="flowPara3184"></flowPara></flowRoot>  </g>
 </svg>

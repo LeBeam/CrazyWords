@@ -21,11 +21,17 @@ public:
 	*/
 	virtual bool init();  
 
-	/**
-	@brief  It is called when the player touches the "New Game" button and gets the player to the New Game Scene.
-	@param pSender  The reference to the New Game Scene
-	*/
-	void startGame(cocos2d::Ref* pSender);
+     /**
+	 @brief  It is called when the player touches the "Level 1" button and gets the player to the Level 1 Scene.
+	 @param pSender  The reference to the Level 1
+	 */
+	 void startLevel1(cocos2d::Ref* pSender);
+
+	 /**
+	 @brief  It is called when the player touches the "Level 2" button and gets the player to the Level 2 Scene.
+	 @param pSender  The reference to the Level 2
+	 */
+	 void startLevel2(cocos2d::Ref* pSender);
 
 	/**
 	@brief  It is called when the player touches the "Instructions" button and gets the player to the Instructions Scene.
@@ -92,9 +98,14 @@ private:
 	void setSettingsButton();
 
 	/**
-	@brief  Creates and places the button that directs to the New Game Scene.
+	@brief  Creates and places the button that directs to the Level 1 Scene.
 	*/
-	void setPlayButton();
+	void setPlayLevel1Button();
+
+	/**
+	@brief  Creates and places the button that directs to the Level 2 Scene.
+	*/
+	void setPlayLevel2Button();
 };
 
 #endif // __MenuScene_SCENE_H__
