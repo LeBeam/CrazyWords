@@ -31,6 +31,8 @@ bool InstructionsScene::init()
 	setHomeButton();
 	setBackgroundMusic();
 	setSettingsButton();
+	setMainInstructions();
+	showHost();
 
 	return true;
 }
@@ -106,6 +108,34 @@ void InstructionsScene::setSettingsButton()
 	auto settingsMenuButton = Menu::create(settingsButton, NULL);
 	settingsMenuButton->setPosition(Point::ZERO);
 	this->addChild(settingsMenuButton, 2);
+}
+
+void InstructionsScene::setMainInstructions()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	std::string instructionMessage;
+	instructionMessage = "Hi!!! I am Professor Lenguin, and I am going to help you on the game. ";
+	instructionMessage += "\nOn every level you will have to complete some crazy tasks that I going to assign you. ";
+	instructionMessage += "\nI hope you enjoy the funny stuff we are going to do, because I really like having fun when learning!!! ";
+	instructionMessage += "";
+
+	LabelTTF* label = LabelTTF::create(instructionMessage, "Arial", 30, CCSizeMake(800, 700), kCCTextAlignmentLeft);
+	label->setColor(ccc3(0,80,150));
+	label->setPosition(Point(origin.x + 510, origin.y + 60));
+	this->addChild(label, 3);
+}
+
+void InstructionsScene::showHost()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto host = Sprite::create("other_images/host.png");
+	host->setPosition(Point(origin.x + 500, origin.y + 500));
+	host->setScale(0.5f);
+	this->addChild(host, 3);
 }
 
 #include "SettingsScene.h"

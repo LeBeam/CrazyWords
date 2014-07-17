@@ -59,6 +59,16 @@ private:
 	@brief  Set the background music for the Instructions Scene.
 	*/
 	void setBackgroundMusic();
+
+	/**
+	@brief Set the main instructions on the screen
+	*/
+	void setMainInstructions();
+
+	/**
+	@brief Set the host on the screen
+	*/
+	void showHost();
 };
 
 #endif // InstructionsScene

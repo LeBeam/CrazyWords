@@ -77,14 +77,25 @@ void Level2Scene::setTouchSoundEffect()
 
 void Level2Scene::showHost()
 {
-	Size visibleSize = Director::getInstance()->getVisibleSize();
+	/*Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 	auto gameObject = GameObject::create();
 	gameObject->setPosition(Point(origin.x + 250, origin.y + 600));
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 3);
-	gameObject->setTexture("other_images/host.png");
+	gameObject->setTexture("other_images/host.png");*/
+
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto homeButton = MenuItemImage::create("other_images/host.png", "other_images/host.png", CC_CALLBACK_1(Level2Scene::setInstructionAudio, this));
+	homeButton->setPosition(Point(origin.x + 250, origin.y + 600));
+	homeButton->setScale(0.5f);
+	auto homeMenuButton = Menu::create(homeButton, NULL);
+	homeMenuButton->setPosition(Point::ZERO);
+	this->addChild(homeMenuButton, 4);
+
 }
 
 void Level2Scene::setInstructionLabel()
@@ -102,7 +113,27 @@ void Level2Scene::setInstructionLabel()
 	label->setColor(ccc3(0,25,50));
 	label->setPosition(Point(origin.x + 250, origin.y + 400));
 	this->addChild(label, 3);
+
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/touch the.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/the.mp3");
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitColor+".mp3").c_str());
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/to.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/paint.mp3");
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitName+".mp3").c_str());
+}
+
+void Level2Scene::setInstructionAudio(Ref* pSender)
+{	
+	GameObject* fruitObject = gameObjectManager.getObject(25);
+    std::string fruitName = fruitObject->getName();
+
+	setFruitColor();
+
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/touch the.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/the.mp3");
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitColor+".mp3").c_str());
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/to.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/paint.mp3");
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitName+".mp3").c_str());
 }
 
@@ -143,7 +174,7 @@ void Level2Scene::setFruitColor()
     if( fruit == "pear")
         fruitColor = "red color";
     if( (fruit == "strawberry") || (fruit == "watermelon") )
-        fruitColor = "yellow";
+        fruitColor = "yellow color";
 }
 
 void Level2Scene::setRedColorButton()

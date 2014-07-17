@@ -115,6 +115,11 @@ private:
 	*/
 	void setPlayingMusic();
 
+	/**
+	brief This method sets the instruction audio
+	*/
+	void setInstructionAudio(Ref* pSender);
+
 protected:
 
 	/**

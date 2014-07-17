@@ -89,6 +89,11 @@ private:
 	*/
 	void setPlayingMusic();
 
+	/**
+	brief This method sets the instruction audio
+	*/
+	void setInstructionAudio(Ref* pSender);
+
 protected:
 	/**
 	@brief  This method is in charge of setting the action that will be played once you touch any sprite

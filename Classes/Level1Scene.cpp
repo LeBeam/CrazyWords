@@ -112,14 +112,24 @@ void Level1Scene::showRandomAnimalForCell(int row, int col)
 
 void Level1Scene::showHost()
 {
-	Size visibleSize = Director::getInstance()->getVisibleSize();
+	/*Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 	auto gameObject = GameObject::create();
 	gameObject->setPosition(Point(origin.x + 100, origin.y + 100));
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 3);
-	gameObject->setTexture("other_images/host.png");
+	gameObject->setTexture("other_images/host.png");*/
+
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+
+	auto homeButton = MenuItemImage::create("other_images/host.png", "other_images/host.png", CC_CALLBACK_1(Level1Scene::setInstructionAudio, this));
+	homeButton->setPosition(Point(origin.x + 100, origin.y + 100));
+	homeButton->setScale(0.5f);
+	auto homeMenuButton = Menu::create(homeButton, NULL);
+	homeMenuButton->setPosition(Point::ZERO);
+	this->addChild(homeMenuButton, 4);
 }
 
 void Level1Scene::setInstructionLabel()
@@ -127,7 +137,7 @@ void Level1Scene::setInstructionLabel()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-	GameObject* animalObject = gameObjectManager.getRandomObject(19);
+	GameObject* animalObject = gameObjectManager.getObject(1);
     std::string animalName = animalObject->getName();
 
     const std::string& instruction = "Touch the " + animalName + "!";
@@ -136,6 +146,18 @@ void Level1Scene::setInstructionLabel()
 	label->setColor(ccc3(51,255,255));
 	label->setPosition(Point(origin.x + 400, origin.y + 70));
 	this->addChild(label, 3);
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/touch.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/the.mp3");
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
+}
+
+void Level1Scene::setInstructionAudio(Ref* pSender)
+{	
+	GameObject* animalObject = gameObjectManager.getObject(1);
+    std::string animalName = animalObject->getName();
+
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/touch the.mp3");
+	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/the.mp3");
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
 }
 
