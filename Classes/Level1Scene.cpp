@@ -82,7 +82,6 @@ void Level1Scene::setPlayingMusic()
 	sound->stopBackgroundMusic();
 	sound->setBackgroundMusicVolume(0.5f);
 	sound->playBackgroundMusic("Music/game_general_music.mp3", true);
-
 }
 
 void Level1Scene::showAnimals()
@@ -102,7 +101,6 @@ void Level1Scene::showAnimals()
 
 void Level1Scene::showRandomAnimalForCell(int row, int col)
 {
-	
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
@@ -122,7 +120,6 @@ void Level1Scene::showHost()
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 3);
 	gameObject->setTexture("other_images/host.png");
-	
 }
 
 void Level1Scene::setInstructionLabel()
@@ -193,7 +190,6 @@ void Level1Scene::returnGameMenu(Ref* pSender)
 	Level1Scene::setTouchSoundEffect();
 	auto newScene = MenuScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
-
 }
 
 

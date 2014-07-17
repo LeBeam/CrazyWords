@@ -62,12 +62,25 @@ private:
 
 	void setRedColorButton();
 
+	void setBlueColorButton();
+
+	void setOrangeColorButton();
+
+	void setPurpleColorButton();
+
+	void setYellowColorButton();
+
+	void setPaintedFruit(Ref* pSender);
+
+	void comparison();
 
 protected:
 
 	GameObjectManager gameObjectManager;
 
 	std::string fruitColor;
+
+	std::string paintedFruit;
 };
 
 #endif // Level2Scene
