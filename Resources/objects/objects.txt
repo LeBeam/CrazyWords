@@ -27,3 +27,8 @@ orange
 pear
 strawberry
 watermelon
+blue color
+orange color
+purple color
+red color
+yellow color

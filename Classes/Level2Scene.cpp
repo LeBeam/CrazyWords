@@ -144,16 +144,11 @@ void Level2Scene::setRedColorButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	/*auto homeButton = MenuItemImage::create("objects/red color.png", "objects/red color.png", CC_CALLBACK_1(Level2Scene::setPaintedFruit, this));
-	homeButton->setPosition(Point(origin.x + 190, origin.y + 280));
-	auto homeMenuButton = Menu::create(homeButton, NULL);
-	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 4);*/
-
-	auto gameObject = Sprite::create("objects/red color.png");
+	GameObject* gameObject = gameObjectManager.getObject(32);
 	gameObject->setPosition(Point(origin.x + 190, origin.y + 280));
-	this->addChild(gameObject, 4);
-	//gameObject->setEventHandlers();
+	this->addChild(gameObject, 3);
+
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setYellowColorButton()
@@ -161,11 +156,11 @@ void Level2Scene::setYellowColorButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto homeButton = MenuItemImage::create("objects/yellow color.png", "objects/yellow color.png", CC_CALLBACK_1(Level2Scene::setPaintedFruit, this));
-	homeButton->setPosition(Point(origin.x + 170, origin.y + 120));
-	auto homeMenuButton = Menu::create(homeButton, NULL);
-	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 4);
+	GameObject* gameObject = gameObjectManager.getObject(33);
+	gameObject->setPosition(Point(origin.x + 170, origin.y + 120));
+	this->addChild(gameObject, 3);
+
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setPurpleColorButton()
@@ -173,11 +168,11 @@ void Level2Scene::setPurpleColorButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto homeButton = MenuItemImage::create("objects/purple color.png", "objects/purple color.png", CC_CALLBACK_1(Level2Scene::setPaintedFruit, this));
-	homeButton->setPosition(Point(origin.x + 320, origin.y + 210));
-	auto homeMenuButton = Menu::create(homeButton, NULL);
-	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 4);
+	GameObject* gameObject = gameObjectManager.getObject(31);
+	gameObject->setPosition(Point(origin.x + 320, origin.y + 210));
+	this->addChild(gameObject, 3);
+
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setBlueColorButton()
@@ -185,11 +180,11 @@ void Level2Scene::setBlueColorButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto homeButton = MenuItemImage::create("objects/blue color.png", "objects/blue color.png", CC_CALLBACK_1(Level2Scene::setPaintedFruit, this));
-	homeButton->setPosition(Point(origin.x + 140, origin.y + 200));
-	auto homeMenuButton = Menu::create(homeButton, NULL);
-	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 4);
+	GameObject* gameObject = gameObjectManager.getObject(29);
+	gameObject->setPosition(Point(origin.x + 140, origin.y + 200));
+	this->addChild(gameObject, 3);
+
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setOrangeColorButton()
@@ -197,11 +192,11 @@ void Level2Scene::setOrangeColorButton()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto homeButton = MenuItemImage::create("objects/orange color.png", "objects/orange color.png", CC_CALLBACK_1(Level2Scene::setPaintedFruit, this));
-	homeButton->setPosition(Point(origin.x + 260, origin.y + 150));
-	auto homeMenuButton = Menu::create(homeButton, NULL);
-	homeMenuButton->setPosition(Point::ZERO);
-	this->addChild(homeMenuButton, 4);
+	GameObject* gameObject = gameObjectManager.getObject(30);
+	gameObject->setPosition(Point(origin.x + 260, origin.y + 150));
+	this->addChild(gameObject, 3);
+
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setPaintedFruit(Ref* pSender)

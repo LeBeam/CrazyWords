@@ -59,7 +59,7 @@ void GameObjectManager::shuffleAnimals()
 
 void GameObjectManager::shuffleFruits()
 { 
-	std::random_shuffle((objects.begin()+22), objects.end());
+	std::random_shuffle( (objects.begin()+22), (objects.begin()+28) );
 }
 
 
