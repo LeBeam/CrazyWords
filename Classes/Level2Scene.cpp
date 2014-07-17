@@ -20,6 +20,9 @@ bool Level2Scene::init()
 	if ( !Layer::init() )
 		return false;
 
+	gameObjectManager.loadObjects();
+	gameObjectManager.shuffleFruits();
+
 	setBackground();
 	setTouchSoundEffect();
 	setSettingsButton();
@@ -27,12 +30,7 @@ bool Level2Scene::init()
 	showHost();
 	showFruits();
 	setInstructionLabel();
-	setRedColorButton();
-	setBlueColorButton();
-	setPurpleColorButton();
-	setYellowColorButton();
-	setOrangeColorButton();
-	//comparison();
+	setColorButtons();
 	
 	return true;
 }
@@ -109,8 +107,8 @@ void Level2Scene::setInstructionLabel()
 
 void Level2Scene::showFruits()
 {
-	gameObjectManager.loadObjects();
-	gameObjectManager.shuffleFruits();
+//	gameObjectManager.loadObjects();
+//	gameObjectManager.shuffleFruits();
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -119,7 +117,7 @@ void Level2Scene::showFruits()
 	gameObject->setPosition(Point(origin.x + 740, origin.y + 384));
 	gameObject->setScale(0.5f);
 	this->addChild(gameObject, 2);
-	//gameObject->setEventHandlers();
+	gameObject->setEventHandlers();
 }
 
 void Level2Scene::setFruitColor()
@@ -199,7 +197,16 @@ void Level2Scene::setOrangeColorButton()
 	gameObject->setEventHandlers();
 }
 
-void Level2Scene::setPaintedFruit(Ref* pSender)
+void Level2Scene::setColorButtons()
+{
+	setRedColorButton();
+	setBlueColorButton();
+	setPurpleColorButton();
+	setYellowColorButton();
+	setOrangeColorButton();
+}
+
+void Level2Scene::setPaintedFruit()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
@@ -215,12 +222,6 @@ void Level2Scene::setPaintedFruit(Ref* pSender)
 	this->addChild(homeMenuButton, 4);
 }
 
-
-/*void Level2Scene::comparison()
-{
-	if(  )	
-}*/
-
 #include "SettingsScene.h"
 void Level2Scene::showSettings(Ref* pSender)
 {
@@ -234,5 +235,4 @@ void Level2Scene::returnGameMenu(Ref* pSender)
 	Level2Scene::setTouchSoundEffect();
 	auto newScene = MenuScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene));
-
 }

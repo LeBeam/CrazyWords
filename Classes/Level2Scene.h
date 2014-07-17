@@ -70,9 +70,11 @@ private:
 
 	void setYellowColorButton();
 
-	void setPaintedFruit(Ref* pSender);
+	void setPaintedFruit();
 
-	void comparison();
+	void setColorButtons();
+
+	//bool comparison(std::string a);
 
 protected:
 

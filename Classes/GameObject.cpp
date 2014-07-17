@@ -31,6 +31,7 @@ void GameObject::setEventHandlers()
 
 	// Example of using a lambda expression to implement onTouchBegan event callback function
 	listener->onTouchBegan = CC_CALLBACK_2(GameObject::onTouchBegan, this);
+	//listener->onTouchEnded = CC_CALLBACK_2(GameObject::onTouchEnded, this);
 
 	//Add listener
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
@@ -52,6 +53,16 @@ bool GameObject::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 		return true;
 	}
 	return false;
+}
+
+void GameObject::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+	/*touchObject = this->name;
+	if( touchObject ==  a)
+	{
+		;
+	}*/
+	//return true;
 }
 
 void GameObject::playSound()
