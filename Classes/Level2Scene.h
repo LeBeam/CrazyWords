@@ -11,6 +11,9 @@ class Level2Scene : public cocos2d::Layer
 {
 public:
 
+	/**
+	@brief Creates the scene that will be used to place all the objects
+	*/
 	static cocos2d::Scene* createScene();
 
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
@@ -52,36 +55,81 @@ private:
 	*/
 	void setTouchSoundEffect();
 
+	/**
+	@brief Sets and shows the host of the game
+	*/
 	void showHost();
 
+	/**
+	@brief Set the instruction for the level
+	*/
 	void setInstructionLabel();
 
+	/**
+	@brief Set the fruit that is going to be on the screen
+	*/
 	void showFruits();
 
+	/**
+	@brief Sets the color of the fruit, which is going to be used to paint the fruit
+	*/
 	void setFruitColor();
 
+	/**
+	@brief Set the red color button on the screen with the sound
+	*/
 	void setRedColorButton();
 
+	/**
+	@brief Set the blue color button on the screen with the sound
+	*/
 	void setBlueColorButton();
 
+	/**
+	@brief Set the orange color button on the screen with the sound
+	*/
 	void setOrangeColorButton();
 
+	/**
+	@brief Set the purple color button on the screen with the sound
+	*/
 	void setPurpleColorButton();
 
+	/**
+	@brief Set the yellow color button on the screen with the sound
+	*/
 	void setYellowColorButton();
 
+	/**
+	@brief Set the fruit that is painted after touching the right color
+	*/
 	void setPaintedFruit();
 
+	/**
+	@brief Set all the color buttons, that were created separetely
+	*/
 	void setColorButtons();
 
-	//bool comparison(std::string a);
+	/**
+	@brief Sets a different background music
+	*/
+	void setPlayingMusic();
 
 protected:
 
+	/**
+	@brief This object helps to create an object that will be used for different purposes
+	*/
 	GameObjectManager gameObjectManager;
 
+	/**
+	@brief Contains the color according the fruit
+	*/
 	std::string fruitColor;
 
+	/**
+	@brief Contains the name of the fruit that will be painted
+	*/
 	std::string paintedFruit;
 };
 

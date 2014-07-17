@@ -101,7 +101,7 @@ void MenuScene::setPlayLevel1Button()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto playButton = MenuItemImage::create("Menu/level1scene1_button.png","Menu/level1scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel1, this));
+	auto playButton = MenuItemImage::create("Menu/level1Scene1_button.png","Menu/level1Scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel1, this));
 	playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.5));
 	auto playMenuButton = Menu::create(playButton, NULL);
 	playMenuButton->setPosition(Point::ZERO);
@@ -113,7 +113,7 @@ void MenuScene::setPlayLevel2Button()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	auto playButton = MenuItemImage::create("Menu/level2scene1_button.png","Menu/level2scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel2, this));
+	auto playButton = MenuItemImage::create("Menu/level2Scene1_button.png","Menu/level2Scene2_button.png",CC_CALLBACK_1(MenuScene::startLevel2, this));
 	playButton->setPosition(Point(origin.x + visibleSize.width/2 * 1.5 ,origin.y+ visibleSize.height/2 * 1.2));
 	auto playMenuButton = Menu::create(playButton, NULL);
 	playMenuButton->setPosition(Point::ZERO);

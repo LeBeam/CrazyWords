@@ -24,6 +24,7 @@ bool Level2Scene::init()
 	gameObjectManager.shuffleFruits();
 
 	setBackground();
+	setPlayingMusic();
 	setTouchSoundEffect();
 	setSettingsButton();
 	setHomeButton();
@@ -103,6 +104,14 @@ void Level2Scene::setInstructionLabel()
 	this->addChild(label, 3);
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitColor+".mp3").c_str());
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+fruitName+".mp3").c_str());
+}
+
+void Level2Scene::setPlayingMusic()
+{
+	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
+	sound->setBackgroundMusicVolume(0.5f);
+	sound->playBackgroundMusic("Music/game_general_music.mp3", true);
 }
 
 void Level2Scene::showFruits()

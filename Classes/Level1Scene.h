@@ -11,6 +11,9 @@ class Level1Scene : public cocos2d::Layer
 {
 public:
 	
+	/**
+	@brief Creates the scene that will be used to place all the objects
+	*/
 	static cocos2d::Scene* createScene();
 
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
@@ -69,13 +72,21 @@ private:
 	/**
 	@brief  This method is in charge of setting the name of the animal that is going to be used in other methods.
 	*/
-
 	std::string setSelectedAnimal();
 	
+	/**
+	@brief Sets and shows the host of the game
+	*/
 	void showHost();
 
+	/**
+	@brief Set the instruction for the level
+	*/
 	void setInstructionLabel();
 
+	/**
+	@brief Sets a different background music
+	*/
 	void setPlayingMusic();
 
 protected:
@@ -91,6 +102,9 @@ protected:
 
 protected:
 
+	/**
+	@brief This object helps to create an object that will be used for different purposes
+	*/
 	GameObjectManager gameObjectManager;
 
 };
