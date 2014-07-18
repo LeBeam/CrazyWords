@@ -7,7 +7,7 @@
 #include <CCSprite.h>
 #include "GameObjectManager.h"
 
-class Level1Scene : public cocos2d::Layer
+class Level1Scene : public cocos2d::Layer, public GameObject::Delegate 
 {
 public:
 	
@@ -94,6 +94,8 @@ private:
 	*/
 	void setInstructionAudio(Ref* pSender);
 
+	bool gameObjectTouched();
+
 protected:
 	/**
 	@brief  This method is in charge of setting the action that will be played once you touch any sprite
@@ -111,6 +113,8 @@ protected:
 	@brief This object helps to create an object that will be used for different purposes
 	*/
 	GameObjectManager gameObjectManager;
+
+	GameObject* targetGameObject; // todo: inicializarlo nullptr
 
 };
 

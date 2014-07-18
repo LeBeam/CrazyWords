@@ -107,6 +107,7 @@ void Level1Scene::showRandomAnimalForCell(int row, int col)
 	GameObject* gameObject = gameObjectManager.getNextRandomObject();
 	gameObject->setPosition(Point(origin.x + (row *175), origin.y + (col *130) + 110));
 	this->addChild(gameObject, 2);
+	gameObject->setDelegate(this);
 	gameObject->setEventHandlers();
 }
 
@@ -137,8 +138,10 @@ void Level1Scene::setInstructionLabel()
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
-	GameObject* animalObject = gameObjectManager.getObject(1);
+	GameObject* animalObject = gameObjectManager.getRandomObject(20);
     std::string animalName = animalObject->getName();
+
+	GameObject::touchedObject = animalName;
 
     const std::string& instruction = "Touch the " + animalName + "!";
 	
@@ -159,6 +162,14 @@ void Level1Scene::setInstructionAudio(Ref* pSender)
 	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/touch the.mp3");
 	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("objects/the.mp3");
 	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(("objects/"+animalName+".mp3").c_str());
+}
+
+bool Level1Scene::gameObjectTouched(GameObject* touchedObject)
+{
+	if( touchedObject == targetGameObject )
+		log("Yo soy el animal que se tocó");
+
+	return false;
 }
 
 /*

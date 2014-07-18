@@ -7,8 +7,17 @@
 
 class GameObject : public cocos2d::Sprite
 {
+public:
+	class Delegate
+	{
+	public:
+		virtual bool gameObjectTouched(GameObject* touchedObject) = 0;
+
+	};
 
 public:
+
+	GameObject();
 
 	/**
 	@brief Creates the scene that will be used to place all the objects
@@ -51,6 +60,9 @@ public:
 	/**
 	@brief  This refers to each line in the file that is going to be loaded.
 	*/
+
+	inline void setDelegate(Delegate* delegate){ this->delegate = delegate;}
+
 private:
 
 	/**
@@ -58,12 +70,15 @@ private:
 	*/
 	std::string name;
 
+	Delegate* delegate;
+
 public:
 
 	/**
 	@brief This object will save the name of an object that has been touched
 	*/
-	std::string touchObject;
+	static std::string touchedObject;
+	
 };
 
 #endif

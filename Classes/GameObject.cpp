@@ -3,6 +3,13 @@
 
 USING_NS_CC;
 
+std::string GameObject::touchedObject;
+
+GameObject::GameObject()
+	:delegate(nullptr)
+{
+}
+
 bool GameObject::loadFile(std::ifstream& file)
 {
 	if ( ! std::getline(file, name) ) return false;
@@ -49,6 +56,12 @@ bool GameObject::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 	//Check the click area
 	if (rect.containsPoint(locationInNode))
 	{
+		if ( name == touchedObject )
+			log("Me buscabas?");
+
+		if ( delegate != nullptr)
+			delegate->gameObjectTouched(this); // todo: verificacion de que delegate no sea nulo, this
+
 		target->playSound();
 		return true;
 	}
