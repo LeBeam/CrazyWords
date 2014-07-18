@@ -1,6 +1,6 @@
 #include "GameObjectManager.h"
 #include "GameObject.h"
-#include "String.h"
+//#include "String.h"
 
 #include <cstdlib>
 #include <cocos2d.h>

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "GameObject.h"
-#include "String.h"
+//#include "String.h"
 
 class GameObjectManager
 {

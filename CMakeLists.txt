@@ -42,12 +42,13 @@ endif()
 set(GAME_SRC
 	proj.linux/main.cpp
 	Classes/AppDelegate.cpp
-	Classes/InstructionsScene.cpp
-	Classes/SettingsScene.cpp
-	Classes/Util.cpp
-	Classes/HelloWorldScene.cpp
 	Classes/GameObject.cpp
-	Classes/StartGameScene.cpp
+	Classes/GameObjectManager.cpp
+	Classes/InstructionsScene.cpp
+	Classes/Level1Scene.cpp
+	Classes/Level2Scene.cpp
+	Classes/MenuScene.cpp
+	Classes/SettingsScene.cpp
 )
 
 set(COCOS2D_ROOT ${CMAKE_SOURCE_DIR}/cocos2d)
